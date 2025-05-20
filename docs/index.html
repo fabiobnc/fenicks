@@ -38,6 +38,9 @@
                 <img src="images/logo-fenicks.png" alt="Logo da empresa fenicks com aguia amarela estilizada">
             </div>
             <nav>
+                <div class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
                 <ul>
                     <li><a href="index.html">Início</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
@@ -46,9 +49,6 @@
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
             </nav>
-            <div class="menu-toggle" id="menu-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
@@ -95,7 +95,24 @@
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const toggle = document.getElementById('menu-toggle');
+            const navList = document.querySelector('nav ul');
+
+            if (toggle && navList) {
+                toggle.addEventListener('click', function () {
+                    navList.classList.toggle('show');
+                });
+
+                navList.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', function () {
+                        navList.classList.remove('show');
+                    });
+                });
+            }
+        });
+    </script>
 
 </body>
 
