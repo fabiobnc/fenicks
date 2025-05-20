@@ -391,10 +391,11 @@ footer {
         top: 100%;
         left: 0;
         right: 0;
-        height: 50vh;
+        height: 60vh;
         background-color: #ffffff;
         width: 100%;
-        padding: 20px;
+        padding: 70px 20px 20px;
+        gap: 2rem;
         box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         z-index: 1001;
         max-height: 80vh;
