@@ -29,74 +29,117 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img class="logo-aguia" src="./images/fenicks-.aguia.png"
-                    alt="Logo da empresa fenicks com aguia amarela estilizada">
-                <img class="logo-texto" src="./images/fenicks-nome.png"
-                    alt="Logo da empresa fenicks com aguia amarela estilizada">
+    <video autoplay muted loop class="video-bg">
+        <source src="videos/bg-index.mp4" type="video/mp4">
+        Seu navegador não suporta vídeos HTML5.
+    </video>
+
+    <div class="page-wrapper">
+        <header>
+            <div class="container">
+                <div class="logo">
+                    <img class="logo-aguia" src="./images/fenicks-.aguia.png"
+                        alt="Logo da empresa fenicks com aguia amarela estilizada">
+                    <img class="logo-texto" src="./images/fenicks-nome.png"
+                        alt="Logo da empresa fenicks com aguia amarela estilizada">
+                </div>
+                <nav>
+                    <div class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <ul>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="servicos.html">Serviços</a></li>
+                        <li><a href="clientes.html">Clientes</a></li>
+                        <li><a href="contato.html">Contato</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav>
-                <div class="menu-toggle" id="menu-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
-                <ul>
-                    <li><a href="index.html">Início</a></li>
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
-                    <li><a href="clientes.html">Clientes</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    <section class="banner">
-        <div class="container">
-            <h2>Soluções Inteligentes em Gestão de Processos Corporativos</h2>
-            <p>Mais de 30 anos entregando excelência, agilidade e confiança.</p>
-        </div>
-    </section>
+        <main>
+            <section class="banner">
+                <div class="container">
+                    <h2>Soluções Inteligentes em Gestão de Processos Corporativos</h2>
+                    <p>Mais de 30 anos entregando excelência, agilidade e confiança.</p>
+                </div>
+            </section>
 
-    <section id="diferenciais" class="destaques">
-        <div class="container">
-            <div class="grid">
-                <div class="box">
-                    <h3>+30 anos de experiência</h3>
-                    <p>Tradição consolidada no atendimento a grandes empresas.</p>
+            <section id="diferenciais" class="diferenciais">
+                <div class="container">
+                    <div class="diferenciais-bloco" data-aos="fade-up">
+                        <div class="icone-e-texto">
+                            <i class="fa-solid fa-briefcase"></i>
+                            <div>
+                                <h3>+30 anos de experiência</h3>
+                                <ul>
+                                    <li>Tradição consolidada no atendimento a grandes empresas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diferenciais-bloco" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icone-e-texto">
+                            <i class="fa-solid fa-globe-americas"></i>
+                            <div>
+                                <h3>Atuação Nacional</h3>
+                                <ul>
+                                    <li>Projetos realizados em todo o Brasil com equipes treinadas.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diferenciais-bloco" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icone-e-texto">
+                            <i class="fa-solid fa-handshake"></i>
+                            <div>
+                                <h3>Clientes de renome</h3>
+                                <ul>
+                                    <li>Parcerias com Bradesco, LATAM, Coca-Cola, Marilan e mais.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="diferenciais-bloco" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icone-e-texto">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <div>
+                                <h3>Serviços Integrados</h3>
+                                <ul>
+                                    <li>De móveis a infraestrutura predial, tudo com a mesma excelência.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="box">
-                    <h3>Atuação Nacional</h3>
-                    <p>Projetos realizados em todo o Brasil com equipes treinadas.</p>
-                </div>
-                <div class="box">
-                    <h3>Clientes de renome</h3>
-                    <p>Parcerias com Bradesco, LATAM, Coca-Cola, Marilan e mais.</p>
-                </div>
-                <div class="box">
-                    <h3>Serviços Integrados</h3>
-                    <p>De móveis a infraestrutura predial, tudo com a mesma excelência.</p>
-                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2025 Fenicks. Todos os direitos reservados.</p>
             </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Fenicks. Todos os direitos reservados.</p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <a href="https://wa.me/5511993115760?text=Olá%2C+gostaria+de+saber+mais+sobre+os+serviços+da+Fenicks."
         class="whatsapp-float" target="_blank" aria-label="Fale conosco pelo WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
+        AOS.init();
+
         document.addEventListener('DOMContentLoaded', function () {
             const toggle = document.getElementById('menu-toggle');
             const navList = document.querySelector('nav ul');
@@ -115,7 +158,6 @@
             }
         });
     </script>
-
 </body>
 
 </html>
