@@ -2,14 +2,70 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Soluções corporativas completas para montagem, manutenção e gestão de processos.">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="A Fenicks é especializada em gestão de obras, montagem de mobiliário corporativo e manutenção predial. Atuamos com excelência em ambientes comerciais e infraestrutura para empresas." />
     <title>Fenicks - Soluções Corporativas</title>
-    <link rel="icon" href="favicon.ico">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" />
+
+    <!-- Preconnect + SRI -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <!-- Mantemos apenas Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Open Graph / Twitter Cards (ajuste URLs reais) -->
+    <meta property="og:title" content="Fenicks - Soluções em Obras e Mobiliário Corporativo" />
+    <meta property="og:description"
+        content="Gestão de obras, mobiliário corporativo e manutenção predial para grandes empresas." />
+    <meta property="og:image" content="https://SEU-DOMINIO/images/og-fenicks.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://SEU-DOMINIO/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Fenicks - Soluções Corporativas" />
+    <meta name="twitter:description" content="Gestão de obras e mobiliário corporativo com excelência." />
+    <meta name="twitter:image" content="https://SEU-DOMINIO/images/og-fenicks.jpg" />
+    <link rel="canonical" href="https://SEU-DOMINIO/" />
+
+    <!-- JSON-LD Organization -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Fenicks",
+    "url": "https://SEU-DOMINIO/",
+    "logo": "https://SEU-DOMINIO/images/fenicks-logo-preto.png",
+    "sameAs": [
+      "https://www.linkedin.com/company/SEU-PERFIL"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+55-61-99824-6913",
+      "contactType": "customer service",
+      "areaServed": "BR"
+    }]
+  }
+  </script>
+
     <style>
+        :root {
+            --navbar-offset: 90px;
+            --section-bg: #ffffff;
+            --oct: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+
+        section[id] {
+            scroll-margin-top: var(--navbar-offset);
+        }
+
+        .bg-light {
+            --section-bg: #f8f9fa;
+        }
+
         .video-bg {
             position: fixed;
             top: 0;
@@ -18,7 +74,13 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0.6;
+            opacity: 0.3;
+        }
+
+        @media (max-width: 576px) {
+            .video-bg {
+                display: none;
+            }
         }
 
         .hero-content {
@@ -26,8 +88,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: rgb(0, 0, 0);
-            text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+            color: #000;
         }
 
         .section-padding {
@@ -41,7 +102,7 @@
             bottom: 20px;
             right: 20px;
             background-color: #25d366;
-            color: #FFF;
+            color: #fff;
             border-radius: 50px;
             text-align: center;
             font-size: 30px;
@@ -55,25 +116,38 @@
 
         .whatsapp-float:hover {
             background-color: #128c7e;
-            color: #FFF;
+            color: #fff;
         }
 
         .image-structure {
-            width: 80%;
-            height: 0px;
             position: relative;
-            margin-top: 200px;
-            margin-left: 150px;
+            width: 100%;
+            max-width: 550px;
+            height: 320px;
+            margin: 0 auto;
         }
 
         .img-octagon-wrapper {
-            width: 250px;
-            height: 250px;
-            clip-path: polygon(30% 0%, 70% 0%,
-                    100% 30%, 100% 70%,
-                    70% 100%, 30% 100%,
-                    0% 70%, 0% 30%);
+            width: 200px;
+            height: 200px;
+            clip-path: var(--oct);
             overflow: hidden;
+            position: absolute;
+            background-color: inherit;
+            outline: 1px solid rgba(0, 0, 0, 0.06);
+            outline-offset: -1px;
+        }
+
+        .img-top-left {
+            top: 0;
+            left: 0;
+            transform: translate(-25%, -25%);
+        }
+
+        .img-bottom-right {
+            bottom: 0;
+            right: 0;
+            transform: translate(25%, 25%);
         }
 
         .img-octagon {
@@ -82,44 +156,36 @@
             object-fit: cover;
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform .3s ease;
         }
 
-        /* Logo central */
+        .img-octagon:hover {
+            transform: scale(1.08);
+        }
+
+        .logo-central {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
         .logo-central img.img-logo {
-            width: 250px;
-            height: 250px;
+            width: 200px;
+            height: 200px;
             object-fit: contain;
-        }
-
-        /*especialidades */
-        ul {
-            padding-left: 1rem;
-            list-style-type: disc;
-        }
-
-        ul li {
-            font-size: 1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        img {
-            transition: transform 0.3s ease;
-        }
-
-        img:hover {
-            transform: scale(1.02);
         }
 
         .img-octagon-destaque-wrapper {
             width: 350px;
             height: 350px;
-            clip-path: polygon(30% 0%, 70% 0%,
-                    100% 30%, 100% 70%,
-                    70% 100%, 30% 100%,
-                    0% 70%, 0% 30%);
+            clip-path: var(--oct);
             overflow: hidden;
             position: relative;
             z-index: 2;
+            background-color: inherit;
+            outline: 1px solid rgba(0, 0, 0, 0.06);
+            outline-offset: -1px;
         }
 
         .img-octagon-destaque {
@@ -128,26 +194,130 @@
             object-fit: cover;
             transform: scale(1.07);
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-            transition: transform 0.3s ease;
+            transition: transform .3s ease;
         }
 
         .img-octagon-destaque-wrapper:hover .img-octagon-destaque {
             transform: scale(1.12);
         }
+
+        ul {
+            padding-left: 1rem;
+            list-style: disc;
+        }
+
+        ul li {
+            font-size: 1rem;
+            margin-bottom: .5rem;
+        }
+
+        #clientes p.lead {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Galeria */
+        #galeria .card {
+            background: transparent;
+        }
+
+        #galeria .card img {
+            cursor: zoom-in;
+        }
+
+        #galeria .card .octogon {
+            background-color: var(--section-bg);
+        }
+
+        .card-img-top.octogon {
+            clip-path: var(--oct);
+            transition: transform .3s ease;
+            object-fit: cover;
+            height: 220px;
+            background-color: var(--section-bg);
+            outline: 1px solid rgba(0, 0, 0, 0.06);
+            outline-offset: -1px;
+        }
+
+        .card-img-top.octogon:hover {
+            transform: scale(1.03);
+        }
+
+        @media (max-width: 992px) {
+            .image-structure {
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .img-octagon-wrapper,
+            .logo-central {
+                position: static;
+                transform: none;
+            }
+
+            .img-octagon-wrapper {
+                width: 160px;
+                height: 160px;
+            }
+
+            .logo-central img.img-logo {
+                width: 140px;
+                height: 140px;
+            }
+
+            .whatsapp-float {
+                bottom: 80px;
+                right: 15px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .video-bg {
+                display: none;
+            }
+        }
+
+        /* Link de pular conteúdo visível ao foco */
+        .visually-hidden-focusable {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .visually-hidden-focusable:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: .5rem 1rem;
+            background: #000;
+            color: #fff;
+            z-index: 1100;
+        }
     </style>
 </head>
 
 <body>
+    <a class="visually-hidden-focusable" href="#conteudo-principal">Ir para o conteúdo</a>
 
-    <video autoplay muted loop class="video-bg">
-        <source src="videos/bg-office.mp4" type="video/mp4">
+    <!-- Vídeo com poster; desativado em mobile pequeno via CSS -->
+    <video autoplay muted loop playsinline preload="metadata" class="video-bg" poster="images/bg-office-poster.jpg">
+        <source src="videos/bg-office.mp4" type="video/mp4" />
         Seu navegador não suporta vídeo.
     </video>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" aria-label="Menu principal">
         <div class="container">
             <a class="navbar-brand" href="#">Fenicks</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -155,6 +325,7 @@
                     <li class="nav-item"><a class="nav-link" href="#sobre">Quem somos</a></li>
                     <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
                     <li class="nav-item"><a class="nav-link" href="#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#galeria">Galeria</a></li>
                     <li class="nav-item"><a class="nav-link" href="#clientes">Clientes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
                 </ul>
@@ -162,405 +333,548 @@
         </div>
     </nav>
 
-    <header class="hero-content text-center">
+    <header class="hero-content text-center" role="banner">
         <div class="container">
-            <h1 class="fs-2 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
-                Bem-vindo à </h1>
-            <img src="images/fenicks-logo-preto.png" alt="Logo da Fenicks"
-                style="max-width: 450px; height: auto; margin-bottom: 20px;">
-            <p class="fs-3 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.5);">
-                Gestão de obras e mobiliário corporativo
-            </p>
-            <a href="#sobre" class="btn btn-lg mt-3"
-                style="background-color: #747372; color: #ffffff; border: none;">Quem somos</a>
+            <h1 class="fs-2 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">
+                Bem-vindo à Fenicks</h1>
+            <img src="images/fenicks-logo-preto.png" alt="Fenicks – Montagem de móveis corporativos" width="450"
+                height="120" style="max-width: 450px; height: auto; margin-bottom: 20px;" loading="lazy"
+                decoding="async" />
+            <p class="fs-3 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">Gestão
+                de obras e mobiliário corporativo</p>
+            <div class="d-flex gap-2 justify-content-center">
+                <a href="#sobre" class="btn btn-lg mt-3 btn-light">Quem somos</a>
+                <a href="#contato" class="btn btn-lg mt-3 btn-primary">Fale com a Fenicks</a>
+            </div>
         </div>
     </header>
 
-    <section id="sobre" class="section-padding bg-light">
-        <div class="container">
-            <h1 class="text-center mb-4">Quem somos</h1>
-            <h3 class="text-center mb-5">Mais de 30 anos entregando soluções completas para empresas</h3>
+    <main id="conteudo-principal">
+        <section id="sobre" class="section-padding bg-light" aria-labelledby="titulo-sobre">
+            <div class="container">
+                <h2 id="titulo-sobre" class="text-center mb-4">Quem somos</h2>
+                <h3 class="text-center mb-5">Mais de 30 anos entregando soluções completas para empresas</h3>
 
-            <div class="row align-items-center mb-5">
-                <!-- Coluna das imagens com layout personalizado -->
-                <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="image-structure position-relative d-flex justify-content-center align-items-center">
-
-                        <!-- Imagem superior esquerda (octógono) -->
-                        <div class="img-octagon-wrapper position-absolute top-0 start-0 translate-middle">
-                            <img src="images/obra_1.jpeg" class="img-octagon" alt="Imagem superior octógono">
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-6 mb-4 mb-md-0">
+                        <div class="image-structure">
+                            <div class="img-octagon-wrapper img-top-left">
+                                <img src="images/obra_1.jpeg" class="img-octagon"
+                                    alt="Detalhe de obra corporativa – drywall e acabamento" loading="lazy"
+                                    decoding="async" width="200" height="200" />
+                            </div>
+                            <div class="logo-central">
+                                <img src="images/fenicks-logo-preto.png" class="img-logo" alt="Logo Fenicks"
+                                    loading="lazy" decoding="async" width="200" height="200" />
+                            </div>
+                            <div class="img-octagon-wrapper img-bottom-right">
+                                <img src="images/obra_2.jpeg" class="img-octagon" alt="Montagem de estações de trabalho"
+                                    loading="lazy" decoding="async" width="200" height="200" />
+                            </div>
                         </div>
-
-                        <!-- Logo central (normal) -->
-                        <div class="logo-central position-relative">
-                            <img src="images/fenicks-logo-preto.png" class="img-logo" alt="Logo Fenicks">
-                        </div>
-
-                        <!-- Imagem inferior direita (octógono) -->
-                        <div class="img-octagon-wrapper position-absolute bottom-0 end-0 translate-middle">
-                            <img src="images/obra_2.jpeg" class="img-octagon" alt="Imagem inferior octógono">
-                        </div>
-
+                    </div>
+                    <div class="col-md-6">
+                        <p class="lead" style="text-align: justify;">
+                            A Fenicks nasceu atuando na desmontagem e manutenção de agências bancárias e expandiu sua
+                            atuação para dois pilares essenciais do ambiente corporativo:
+                            <br /><br />
+                            ✔️ <strong>Gestão de Obras</strong> – Planejamento e execução de reformas com controle
+                            técnico e eficiência.
+                            <br /><br />
+                            ✔️ <strong>Mobiliário Corporativo</strong> – Montagem, manutenção e fornecimento de móveis
+                            de alto padrão. Com foco em qualidade, agilidade e relacionamento próximo com o cliente, nos
+                            tornamos referência nacional em projetos para bancos, indústrias e escritórios.
+                        </p>
+                        <p class="lead" style="text-align: justify;">
+                            Graças à nossa excelência operacional, firmamos parcerias estratégicas com grandes
+                            fabricantes e atendemos empresas de todo o Brasil. Hoje nos destacamos pela execução ágil e
+                            pela gestão completa de obras e montagens em território nacional.
+                        </p>
                     </div>
                 </div>
 
-                <!-- Coluna do texto -->
-                <div class="col-md-6">
-                    <p class="lead" style="text-align: justify;">
-                        A Fenicks nasceu atuando na desmontagem e manutenção de agências bancárias e expandiu
-                        sua atuação para dois pilares essenciais do ambiente corporativo:
-                        <br><br>
-                        ✔️ Gestão de Obras – Planejamento e execução de reformas com controle técnico e
-                        eficiência.
-                        <br><br>
-                        ✔️ Mobiliário Corporativo – Montagem, manutenção e fornecimento de móveis de alto
-                        padrão. Com foco em qualidade, agilidade e relacionamento próximo com o cliente, nos
-                        tornamos referência nacional em projetos para bancos, indústrias e escritórios.
-                    </p>
-                    <p class="lead" style="text-align: justify;">
-                        Graças à nossa excelência operacional conseguimos firmar parcerias estratégicas com grandes
-                        fabricantes e atender grandes empresas.
-                        Hoje nos destacamos pela execução ágil e pela gestão completa de obras e montagens em todo o
-                        território nacional.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Cards Missão, Visão, Valores -->
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <i class="fas fa-bullseye fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Missão</h5>
-                            <p class="card-text">Fornecer soluções inteligentes em gestão de obras e mobiliário
-                                corporativo, com qualidade, agilidade e foco no cliente.</p>
+                <div class="row text-center" aria-label="Missão, Visão e Valores">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-bullseye fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                <h4 class="card-title h5">Missão</h4>
+                                <p class="card-text">Fornecer soluções inteligentes em gestão de obras e mobiliário
+                                    corporativo, com qualidade, agilidade e foco no cliente.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <i class="fas fa-eye fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Visão</h5>
-                            <p class="card-text">Ser referência nacional nas duas áreas, consolidando-se pelo
-                                atendimento humanizado, cumprimento de prazos e inovação técnica.</p>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-eye fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                <h4 class="card-title h5">Visão</h4>
+                                <p class="card-text">Ser referência nacional nas duas áreas, consolidando-se pelo
+                                    atendimento humanizado, cumprimento de prazos e inovação técnica.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm border-0">
-                        <div class="card-body">
-                            <i class="fas fa-heart fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Valores</h5>
-                            <p class="card-text">Prezamos pelo comprometimento, transparência, excelência,
-                                inovação constante e respeito aos nossos clientes.</p>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <i class="bi bi-heart fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                <h4 class="card-title h5">Valores</h4>
+                                <p class="card-text">Comprometimento, transparência, excelência, inovação constante e
+                                    respeito aos clientes.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="servicos" class="section-padding">
-        <!-- Especialidades -->
-        <div class="text-center mb-5">
-            <h1 class="text-center">Nossas Especialidades</h3>
-        </div>
-
-        <div class="container">
-
-            <!-- Gestão de Obras -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                        <img src="images/projeto.jpeg" alt="Obra corporativa" class="img-octagon-destaque">
+        <section id="servicos" class="section-padding" aria-labelledby="titulo-servicos">
+            <div class="text-center mb-5">
+                <h2 id="titulo-servicos" class="text-center">Nossas Especialidades</h2>
+            </div>
+            <div class="container">
+                <!-- Gestão de Obras -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-6">
+                        <div class="img-octagon-destaque-wrapper mx-auto mb-4">
+                            <img src="images/projeto.jpeg" alt="Equipe executando obra corporativa"
+                                class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="fw-bold mb-3"><i class="bi bi-building me-2 text-primary"
+                                aria-hidden="true"></i>Gestão de Obras</h3>
+                        <p class="lead">Planejamento e execução de obras corporativas com responsabilidade, controle e
+                            excelência.</p>
+                        <ul>
+                            <li>Planejamento detalhado da obra</li>
+                            <li>Supervisão técnica em todas as etapas</li>
+                            <li>Acompanhamento com relatórios periódicos</li>
+                            <li>Gestão de interface com terceiros</li>
+                            <li>Entrega técnica e suporte pós-obra</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="fw-bold mb-3"><i class="bi bi-building me-2 text-primary"></i>Gestão de Obras</h3>
-                    <p class="lead">Planejamento e execução de obras corporativas com responsabilidade, controle e
-                        excelência.</p>
-                    <ul>
-                        <li>Planejamento detalhado da obra</li>
-                        <li>Supervisão técnica em todas as etapas</li>
-                        <li>Acompanhamento com relatórios periódicos</li>
-                        <li>Gestão de interface com terceiros</li>
-                        <li>Entrega técnica e suporte pós-obra</li>
-                    </ul>
-                </div>
-            </div>
 
-            <!-- Mobiliário Corporativo -->
-            <div class="row align-items-center flex-row-reverse mb-5">
-                <div class="col-md-6">
-                    <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                        <img src="images/mobiliario.jpeg" alt="Obra corporativa" class="img-octagon-destaque">
+                <!-- Mobiliário Corporativo -->
+                <div class="row align-items-center flex-row-reverse mb-5">
+                    <div class="col-md-6">
+                        <div class="img-octagon-destaque-wrapper mx-auto mb-4">
+                            <img src="images/mobiliario.jpeg" alt="Montagem e realocação de mobiliário corporativo"
+                                class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="fw-bold mb-3"><i class="bi bi-layout-text-window-reverse me-2 text-primary"
+                                aria-hidden="true"></i>Mobiliário Corporativo</h3>
+                        <p class="lead">Montagem, desmontagem e realocação com gestão técnica completa e eficiência
+                            logística.</p>
+                        <ul>
+                            <li>Montagem conforme layout do cliente</li>
+                            <li>Gestão de demandas e vistorias</li>
+                            <li>Identificação, manutenção e ajustes</li>
+                            <li>Logística de transporte e suporte final</li>
+                            <li>Fornecimento de móveis de alto padrão</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="fw-bold mb-3"><i
-                            class="bi bi-layout-text-window-reverse me-2 text-primary"></i>Mobiliário Corporativo
-                    </h3>
-                    <p class="lead">Montagem, desmontagem e realocação com gestão técnica completa e eficiência
-                        logística.</p>
-                    <ul>
-                        <li>Montagem conforme layout do cliente</li>
-                        <li>Gestão de demandas e vistorias</li>
-                        <li>Identificação, manutenção e ajustes</li>
-                        <li>Logística de transporte e suporte final</li>
-                        <li>Fornecimento de móveis de alto padrão</li>
-                    </ul>
-                </div>
-            </div>
 
-            <!-- Instalações Técnicas -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                        <img src="images/eletrica.jpeg" alt="Obra corporativa" class="img-octagon-destaque">
+                <!-- Instalações Técnicas -->
+                <div class="row align-items-center mb-5">
+                    <div class="col-md-6">
+                        <div class="img-octagon-destaque-wrapper mx-auto mb-4">
+                            <img src="images/eletrica.jpeg"
+                                alt="Instalações elétricas e de rede em ambiente corporativo"
+                                class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="fw-bold mb-3"><i class="bi bi-plug me-2 text-primary"
+                                aria-hidden="true"></i>Instalação Elétrica e Rede</h3>
+                        <p class="lead">Soluções integradas para deixar sua estrutura 100% pronta para uso corporativo.
+                        </p>
+                        <ul>
+                            <li>Instalação de pontos elétricos e rede</li>
+                            <li>Organização de rack e cabeamento</li>
+                            <li>Instalação de câmeras e sistema de segurança</li>
+                            <li>Readequações técnicas conforme normas</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="fw-bold mb-3"><i class="bi bi-plug me-2 text-primary"></i>Instalação Elétrica e Rede
-                    </h3>
-                    <p class="lead">Soluções integradas para deixar sua estrutura 100% pronta para uso corporativo.
-                    </p>
-                    <ul>
-                        <li>Instalação de pontos elétricos e rede</li>
-                        <li>Organização de rack e cabeamento</li>
-                        <li>Instalação de câmeras e sistema de segurança</li>
-                        <li>Readequações técnicas conforme normas</li>
-                    </ul>
-                </div>
-            </div>
 
-            <!-- Reforma e Manutenção Predial -->
-            <div class="row align-items-center flex-row-reverse mb-5">
-                <div class="col-md-6">
-                    <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                        <img src="images/reforma.jpeg" alt="Obra corporativa" class="img-octagon-destaque">
+                <!-- Reforma e Manutenção Predial -->
+                <div class="row align-items-center flex-row-reverse mb-5">
+                    <div class="col-md-6">
+                        <div class="img-octagon-destaque-wrapper mx-auto mb-4">
+                            <img src="images/reforma.jpeg" alt="Reformas internas e externas em prédio comercial"
+                                class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 class="fw-bold mb-3"><i class="bi bi-house-gear me-2 text-primary"
+                                aria-hidden="true"></i>Reforma e Manutenção Predial</h3>
+                        <p class="lead">Reformas internas e externas com foco em funcionalidade, acabamento e conforto.
+                        </p>
+                        <ul>
+                            <li>Drywall, divisórias e infraestrutura</li>
+                            <li>Instalação de ar-condicionado split</li>
+                            <li>Pisos, carpetes e pintura</li>
+                            <li>Limpeza pós-obra e entrega técnica</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <h3 class="fw-bold mb-3"><i class="bi bi-house-gear me-2 text-primary"></i>Reforma e Manutenção
-                        Predial</h3>
-                    <p class="lead">Reformas internas e externas com foco em funcionalidade, acabamento e conforto.
-                    </p>
-                    <ul>
-                        <li>Drywall, divisórias e infraestrutura</li>
-                        <li>Instalação de ar-condicionado split</li>
-                        <li>Pisos, carpetes e pintura</li>
-                        <li>Limpeza pós-obra e entrega técnica</li>
-                    </ul>
+
+                <!-- CTA secundário para conversão -->
+                <div class="text-center mt-4">
+                    <a href="#contato" class="btn btn-primary btn-lg">
+                        <i class="bi bi-envelope-paper me-2" aria-hidden="true"></i>Solicitar orçamento
+                    </a>
                 </div>
             </div>
+        </section>
 
-        </div>
-    </section>
-
-    <section id="diferenciais" class="section-padding bg-light">
-        <div class="container text-center">
-            <h1 class="text-center mb-4">Soluções que transformam espaços corporativos</h2>
+        <section id="diferenciais" class="section-padding bg-light" aria-labelledby="titulo-diferenciais">
+            <div class="container text-center">
+                <h2 id="titulo-diferenciais" class="text-center mb-4">Soluções que transformam espaços corporativos</h2>
                 <div class="row justify-content-center">
                     <div class="col-lg-12">
-                        <p class="lead" style="text-align: justify;">
-                            Aliamos <strong>experiência prática em campo</strong> com <strong>atendimento
-                                personalizado</strong>,
-                            entregando cada projeto com excelência, agilidade e comprometimento.
-                        </p>
-                        <div class="row mt-5">
-
-                            <div class="col-auto" style="width: 20%;">
+                        <p class="lead" style="text-align: justify;">Aliamos <strong>experiência prática em
+                                campo</strong> com <strong>atendimento personalizado</strong>, entregando cada projeto
+                            com excelência, agilidade e comprometimento.</p>
+                        <div class="row mt-5 g-4" role="list">
+                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
                                 <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255, 255, 255, 0.25);">
+                                    style="background-color: rgba(255,255,255,0.25);">
                                     <div class="card-body">
-                                        <i class="fas fa-gears fa-3x text-primary mb-3"></i>
-                                        <h5 class="card-title">Experiência em campo</h5>
-                                        <ul class="list-unstyled">
-                                            <li>Know-how técnico e prático em todas as etapas da obra.</li>
-                                        </ul>
+                                        <i class="bi bi-gear-wide-connected fs-1 text-primary mb-3"
+                                            aria-hidden="true"></i>
+                                        <h3 class="card-title h5">Experiência em campo</h3>
+                                        <p class="mb-0">Know-how técnico e prático em todas as etapas da obra.</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-auto" style="width: 20%;">
+                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
                                 <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255, 255, 255, 0.25);">
+                                    style="background-color: rgba(255,255,255,0.25);">
                                     <div class="card-body">
-                                        <i class="fas fa-gears fa-3x text-primary mb-3"></i>
-                                        <h5 class="card-title">Cumprimento de prazos</h5>
-                                        <ul class="list-unstyled">
-                                            <li>Execução rigorosa conforme cronograma definido.</li>
-                                        </ul>
+                                        <i class="bi bi-clock-history fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                        <h3 class="card-title h5">Cumprimento de prazos</h3>
+                                        <p class="mb-0">Execução rigorosa conforme cronograma definido.</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-auto" style="width: 20%;">
+                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
                                 <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255, 255, 255, 0.25);">
+                                    style="background-color: rgba(255,255,255,0.25);">
                                     <div class="card-body">
-                                        <i class="fas fa-gears fa-3x text-primary mb-3"></i>
-                                        <h5 class="card-title">Obra + Mobiliário</h5>
-                                        <ul class="list-unstyled">
-                                            <li>Integração completa entre ambiente físico e mobiliário.</li>
-                                        </ul>
+                                        <i class="bi bi-grid-3x3-gap fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                        <h3 class="card-title h5">Obra + Mobiliário</h3>
+                                        <p class="mb-0">Integração completa entre ambiente físico e mobiliário.</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-auto" style="width: 20%;">
+                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
                                 <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255, 255, 255, 0.25);">
+                                    style="background-color: rgba(255,255,255,0.25);">
                                     <div class="card-body">
-                                        <i class="fas fa-gears fa-3x text-primary mb-3"></i>
-                                        <h5 class="card-title">Suporte técnico</h5>
-                                        <ul class="list-unstyled">
-                                            <li>Assistência completa do início ao fim da obra.</li>
-                                        </ul>
+                                        <i class="bi bi-headset fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                        <h3 class="card-title h5">Suporte técnico</h3>
+                                        <p class="mb-0">Assistência completa do início ao fim da obra.</p>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-auto" style="width: 20%;">
+                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
                                 <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255, 255, 255, 0.25);">
+                                    style="background-color: rgba(255,255,255,0.25);">
                                     <div class="card-body">
-                                        <i class="fas fa-gears fa-3x text-primary mb-3"></i>
-                                        <h5 class="card-title">Atendimento personalizado</h5>
-                                        <ul class="list-unstyled">
-                                            <li>Soluções sob medida para a realidade do seu negócio.</li>
-                                        </ul>
+                                        <i class="bi bi-person-check fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                        <h3 class="card-title h5">Atendimento personalizado</h3>
+                                        <p class="mb-0">Soluções sob medida para a realidade do seu negócio.</p>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-        </div>
-    </section>
-
-    <section id="clientes" class="section-padding">
-        <div class="container">
-            <h1 class="text-center mb-4">Clientes e projetos</h1>
-            <h3 class="text-center mb-4">Presença nacional em grandes ambientes corporativos</h3>
-            <p class="lead text-center mb-5" style="margin-left: 6rem; margin-right: 6rem;">
-                Atendemos marcas como Bradesco, Itaú, LATAM, Embraer, Coca-Cola, Marilan e Caderode, atuando
-                desde a montagem de ambientes até a gestão completa de obras. Nossa expertise está presente em
-                projetos
-                de
-                alta complexidade em todo o Brasil.
-            </p>
-
-            <!-- Logos dos clientes -->
-            <div class="row justify-content-center g-4">
-                <div class="col-6 col-md-2">
-                    <div class="card shadow-sm border-0 p-4">
-                        <img src="./images/logo-bradesco.svg" alt="Bradesco" class="img-fluid"
-                            style="height: 60px; object-fit: contain;">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="card shadow-sm border-0 p-4">
-                        <img src="./images/logo-itau.svg" alt="Itaú" class="img-fluid"
-                            style="height: 60px; object-fit: contain;">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="card shadow-sm border-0 p-4">
-                        <img src="./images/logo-latam.svg" alt="Latam" class="img-fluid"
-                            style="height: 60px; object-fit: contain;">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="card shadow-sm border-0 p-4">
-                        <img src="./images/logo-embraer.svg" alt="Embraer" class="img-fluid"
-                            style="height: 60px; object-fit: contain;">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="card shadow-sm border-0 p-4">
-                        <img src="./images/logo-coca.svg" alt="Coca-Cola" class="img-fluid"
-                            style="height: 60px; object-fit: contain;">
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="card shadow-sm border-0 p-4">
-                        <img src="./images/logo-marilan.png" alt="Marilan" class="img-fluid"
-                            style="height: 60px; object-fit: contain;">
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ícones em cards -->
-            <div class="row mt-5">
-                <div class="col-md-4">
-                    <div class="card shadow-sm border-0 h-100 p-4">
-                        <div class="card-body text-center">
-                            <i class="fas fa-briefcase fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">+30 anos de experiência</h5>
-                            <p class="card-text">Tradição e excelência na entrega de serviços corporativos.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm border-0 h-100 p-4">
-                        <div class="card-body text-center">
-                            <i class="fas fa-map-marker-alt fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Atuação nacional</h5>
-                            <p class="card-text">Atendemos clientes em todo o Brasil, com soluções eficientes.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card shadow-sm border-0 h-100 p-4">
-                        <div class="card-body text-center">
-                            <i class="fas fa-star fa-3x text-primary mb-3"></i>
-                            <h5 class="card-title">Alto índice de satisfação</h5>
-                            <p class="card-text">Clientes satisfeitos com nossos serviços ágeis e qualificados.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
+        <section id="clientes" class="section-padding" aria-labelledby="titulo-clientes">
+            <div class="container">
+                <h2 id="titulo-clientes" class="text-center mb-4">Clientes e projetos</h2>
+                <h3 class="text-center mb-4">Presença nacional em grandes ambientes corporativos</h3>
+                <p class="lead text-center mb-5">Atendemos marcas como Bradesco, Itaú, LATAM, Embraer, Coca-Cola,
+                    Marilan e Caderode, atuando desde a montagem de ambientes até a gestão completa de obras. Nossa
+                    expertise está presente em projetos de alta complexidade em todo o Brasil.</p>
 
-    <section id="contato" class="section-padding bg-light">
-        <div class="container">
-            <h2 class="text-center mb-4">Entre em Contato</h2>
-            <form action="https://formsubmit.co/contato@fenicks.com.br" method="POST">
-                <div class="mb-3">
-                    <input type="text" class="form-control" name="nome" placeholder="Seu nome" required>
+                <div class="row justify-content-center g-4" aria-label="Marcas atendidas">
+                    <div class="col-6 col-md-2">
+                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                            <img src="./images/logo-bradesco.svg" alt="Bradesco" class="img-fluid"
+                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
+                                height="60" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                            <img src="./images/logo-itau.svg" alt="Itaú" class="img-fluid"
+                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
+                                height="60" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                            <img src="./images/logo-latam.svg" alt="Latam" class="img-fluid"
+                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
+                                height="60" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                            <img src="./images/logo-embraer.svg" alt="Embraer" class="img-fluid"
+                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
+                                height="60" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                            <img src="./images/logo-coca.svg" alt="Coca-Cola" class="img-fluid"
+                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
+                                height="60" />
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-2">
+                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                            <img src="./images/logo-marilan.png" alt="Marilan" class="img-fluid"
+                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
+                                height="60" />
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="email" class="form-control" name="email" placeholder="Seu e-mail" required>
+
+                <div class="row mt-5">
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100 p-4 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-briefcase fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                <h3 class="card-title h5">+30 anos de experiência</h3>
+                                <p class="card-text">Tradição e excelência na entrega de serviços corporativos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100 p-4 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-geo-alt fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Atuação nacional</h3>
+                                <p class="card-text">Atendemos clientes em todo o Brasil, com soluções eficientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card shadow-sm border-0 h-100 p-4 text-center">
+                            <div class="card-body">
+                                <i class="bi bi-star fs-1 text-primary mb-3" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Alto índice de satisfação</h3>
+                                <p class="card-text">Clientes satisfeitos com nossos serviços ágeis e qualificados.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <input type="tel" class="form-control" name="telefone" placeholder="Telefone" required>
+            </div>
+        </section>
+
+        <section id="galeria" class="section-padding bg-light" aria-labelledby="titulo-galeria">
+            <div class="container">
+                <h2 id="titulo-galeria" class="text-center mb-4">Serviços Realizados</h2>
+                <p class="lead text-center mb-5" style="max-width: 800px; margin: auto;">Veja alguns dos serviços
+                    realizados pela Fenicks em todo o Brasil. Entregamos ambientes completos, modernos e funcionais para
+                    escritórios, bancos, indústrias e empresas de diversos segmentos.</p>
+
+                <div class="row g-4">
+                    <!-- Repita os itens conforme necessário -->
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="images/obra_1.jpeg" class="card-img-top img-fluid octogon"
+                                alt="Montagem de agência bancária em Brasília" loading="lazy" decoding="async"
+                                width="800" height="600" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="images/obra_2.jpeg" class="card-img-top img-fluid octogon"
+                                alt="Instalação de estações de trabalho e cabeamento" loading="lazy" decoding="async"
+                                width="800" height="600" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="images/obra_3.jpeg" class="card-img-top img-fluid octogon"
+                                alt="Reforma de piso e pintura em escritório corporativo" loading="lazy"
+                                decoding="async" width="800" height="600" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="images/obra_4.jpeg" class="card-img-top img-fluid octogon"
+                                alt="Instalação elétrica e de rede – rack organizado" loading="lazy" decoding="async"
+                                width="800" height="600" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="images/obra_5.jpeg" class="card-img-top img-fluid octogon"
+                                alt="Divisórias em drywall e acabamento fino" loading="lazy" decoding="async"
+                                width="800" height="600" />
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <img src="images/obra_1.jpeg" class="card-img-top img-fluid octogon"
+                                alt="Montagem de mobiliário em open space" loading="lazy" decoding="async" width="800"
+                                height="600" />
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <textarea class="form-control" name="mensagem" rows="4" placeholder="Sua mensagem"
-                        required></textarea>
-                </div>
-                <input type="hidden" name="_captcha" value="false">
-                <input type="hidden" name="_next" value="https://seusite.com/obrigado.html">
-                <button type="submit" class="btn btn-primary">Enviar</button>
-            </form>
-        </div>
-    </section>
+            </div>
+        </section>
+
+        <section id="contato" class="section-padding bg-light" aria-labelledby="titulo-contato">
+            <div class="container">
+                <h2 id="titulo-contato" class="text-center mb-4">Entre em Contato</h2>
+                <form action="https://formsubmit.co/contato@fenicks.com.br" method="POST" class="needs-validation"
+                    novalidate>
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" id="nome" class="form-control" name="nome" placeholder="Seu nome" required
+                            autocomplete="name" />
+                        <div class="invalid-feedback">Informe seu nome.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" id="email" class="form-control" name="email" placeholder="Seu e-mail"
+                            required autocomplete="email" inputmode="email" />
+                        <div class="invalid-feedback">Informe um e-mail válido.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="telefone" class="form-label">Telefone</label>
+                        <input type="tel" id="telefone" class="form-control" name="telefone"
+                            placeholder="(61) 99824-6913" required autocomplete="tel"
+                            pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" inputmode="tel" />
+                        <div class="invalid-feedback">Informe um telefone válido.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea id="mensagem" class="form-control" name="mensagem" rows="4" placeholder="Sua mensagem"
+                            required></textarea>
+                        <div class="invalid-feedback">Escreva sua mensagem.</div>
+                    </div>
+                    <!-- LGPD -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" value="1" id="lgpd" required />
+                        <label class="form-check-label" for="lgpd">Autorizo o contato da Fenicks para prosseguimento do
+                            meu atendimento e concordo com a Política de Privacidade.</label>
+                        <div class="invalid-feedback">Para enviar, é necessário aceitar nossa Política de Privacidade.
+                        </div>
+                    </div>
+                    <!-- Honeypot + redirect -->
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_next" value="https://SEU-DOMINIO/obrigado.html" />
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p class="mb-0">&copy; 2025 Fenicks. Todos os direitos reservados.</p>
+        <p class="mb-0">&copy; <span id="ano"></span> Fenicks. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5561998246913?text=Olá%20gostaria%20de%20saber%20mais%20sobre%20as%20soluções%20da%20Fenicks!"
-        target="_blank" class="whatsapp-float">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/5561998246913?text=Ol%C3%A1%20gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20da%20Fenicks!"
+        target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato via WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Ano no footer
+        document.getElementById('ano').textContent = new Date().getFullYear();
+
+        // Scroll suave para âncoras (fallback se não existir alvo)
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+
+        // Destaque do link ativo na navbar + aria-current
+        const sections = document.querySelectorAll('main section[id]');
+        const navLinks = document.querySelectorAll('.navbar .nav-link');
+        const io = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(l => {
+                        const match = l.getAttribute('href') === '#' + entry.target.id;
+                        l.classList.toggle('active', match);
+                        if (match) { l.setAttribute('aria-current', 'page'); }
+                        else { l.removeAttribute('aria-current'); }
+                    });
+                }
+            });
+        }, { rootMargin: '-40% 0px -55% 0px' });
+        sections.forEach(s => io.observe(s));
+
+        // Validação Bootstrap
+        (() => {
+            'use strict';
+            const forms = document.querySelectorAll('.needs-validation');
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', e => {
+                    if (!form.checkValidity()) { e.preventDefault(); e.stopPropagation(); }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        })();
+    </script>
+
+    <!-- Modal de visualização da imagem (acessível) -->
+    <div class="modal fade" id="modalImagem" tabindex="-1" aria-labelledby="modalImagemLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="dialog" aria-modal="true">
+            <div class="modal-content bg-transparent border-0">
+                <div class="d-flex justify-content-end p-2">
+                    <button type="button" class="btn btn-light btn-sm" data-bs-dismiss="modal"
+                        aria-label="Fechar">&times;</button>
+                </div>
+                <h2 id="modalImagemLabel" class="visually-hidden">Visualização da imagem</h2>
+                <img id="imagemAmpliada" src="" alt="Imagem ampliada" class="img-fluid rounded shadow" />
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Delegação para abrir o modal da galeria + suporte a teclado
+        const galeria = document.getElementById('galeria');
+        galeria.addEventListener('click', (e) => {
+            const img = e.target.closest('img');
+            if (!img) return;
+            document.getElementById('imagemAmpliada').src = img.currentSrc || img.src;
+            new bootstrap.Modal(document.getElementById('modalImagem')).show();
+        });
+
+        galeria.querySelectorAll('img').forEach(img => {
+            img.tabIndex = 0;
+            img.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    img.click(); e.preventDefault();
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
