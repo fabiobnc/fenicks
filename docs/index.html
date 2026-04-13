@@ -7,29 +7,33 @@
     <meta name="description"
         content="A Fenicks é especializada em gestão de obras, montagem de mobiliário corporativo e manutenção predial. Atuamos com excelência em ambientes comerciais e infraestrutura para empresas." />
     <title>Fenicks - Soluções Corporativas</title>
-    <link rel="icon" href="favicon.ico" />
+    <link rel="icon" href="images/marca/favicon.png" type="image/png" />
 
     <!-- Preconnect + SRI -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
     <!-- Mantemos apenas Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 
-    <!-- Open Graph / Twitter Cards (ajuste URLs reais) -->
+    <!-- Open Graph / Twitter Cards -->
     <meta property="og:title" content="Fenicks - Soluções em Obras e Mobiliário Corporativo" />
     <meta property="og:description"
         content="Gestão de obras, mobiliário corporativo e manutenção predial para grandes empresas." />
-    <meta property="og:image" content="https://SEU-DOMINIO/images/og-fenicks.jpg" />
+    <meta property="og:image" content="https://www.fenicks.com.br/images/marca/logo-fenicks.png" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://SEU-DOMINIO/" />
+    <meta property="og:url" content="https://www.fenicks.com.br/" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Fenicks - Soluções Corporativas" />
     <meta name="twitter:description" content="Gestão de obras e mobiliário corporativo com excelência." />
-    <meta name="twitter:image" content="https://SEU-DOMINIO/images/og-fenicks.jpg" />
-    <link rel="canonical" href="https://SEU-DOMINIO/" />
+    <meta name="twitter:image" content="https://www.fenicks.com.br/images/marca/logo-fenicks.png" />
+    <link rel="canonical" href="https://www.fenicks.com.br/" />
 
     <!-- JSON-LD Organization -->
     <script type="application/ld+json">
@@ -37,10 +41,10 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Fenicks",
-    "url": "https://SEU-DOMINIO/",
-    "logo": "https://SEU-DOMINIO/images/fenicks-logo-preto.png",
+    "url": "https://www.fenicks.com.br/",
+    "logo": "https://www.fenicks.com.br/images/marca/fenicks-logo-preto.png",
     "sameAs": [
-      "https://www.linkedin.com/company/SEU-PERFIL"
+    "https://www.linkedin.com/company/fenicks"
     ],
     "contactPoint": [{
       "@type": "ContactPoint",
@@ -51,11 +55,54 @@
   }
   </script>
 
+    <!-- GA4: substitua G-XXXXXXXXXX pelo seu Measurement ID real -->
+    <script>
+        window.FENICKS_GA4_ID = 'G-XXXXXXXXXX';
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.FENICKS_GA4_ID}`;
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', window.FENICKS_GA4_ID, {
+            anonymize_ip: true,
+            transport_type: 'beacon'
+        });
+    </script>
+
     <style>
         :root {
             --navbar-offset: 90px;
             --section-bg: #ffffff;
+            --brand-dark: #111827;
+            --brand-ink: #0f172a;
+            --brand-primary: #0b4fcf;
+            --brand-accent: #1e88e5;
+            --brand-soft: #eaf1ff;
             --oct: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--brand-ink);
+            background: radial-gradient(circle at 20% 10%, #f2f6ff 0%, #f8fafc 40%, #eef2f7 100%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand,
+        .btn {
+            font-family: 'Sora', sans-serif;
+            letter-spacing: -0.01em;
         }
 
         section[id] {
@@ -95,6 +142,27 @@
             padding: 4rem 0;
         }
 
+        .glass-card {
+            background: rgba(255, 255, 255, 0.78);
+            border: 1px solid rgba(11, 79, 207, 0.1);
+            border-radius: 16px;
+            box-shadow: 0 10px 26px rgba(15, 23, 42, 0.09);
+        }
+
+        .section-title-kicker {
+            color: var(--brand-primary);
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-size: .8rem;
+            font-weight: 700;
+            margin-bottom: .6rem;
+        }
+
+        .navbar {
+            background: rgba(12, 18, 28, 0.95) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+        }
+
         .whatsapp-float {
             position: fixed;
             width: 60px;
@@ -119,11 +187,32 @@
             color: #fff;
         }
 
+        .mobile-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1040;
+            display: none;
+            gap: .5rem;
+            padding: .6rem;
+            background: rgba(17, 24, 39, 0.97);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .mobile-cta .btn {
+            flex: 1;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+
         .image-structure {
-            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             width: 100%;
-            max-width: 550px;
-            height: 320px;
+            max-width: 420px;
+            min-height: 320px;
             margin: 0 auto;
         }
 
@@ -164,15 +253,13 @@
         }
 
         .logo-central {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: static;
+            transform: none;
         }
 
         .logo-central img.img-logo {
-            width: 200px;
-            height: 200px;
+            width: min(100%, 280px);
+            height: auto;
             object-fit: contain;
         }
 
@@ -244,6 +331,127 @@
             transform: scale(1.03);
         }
 
+        .card-img-top.octogon:focus-visible {
+            outline: 3px solid #0d6efd;
+            outline-offset: 2px;
+        }
+
+        #galeria .galeria-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.15rem;
+        }
+
+        #galeria .galeria-item {
+            min-width: 0;
+        }
+
+        #galeria .galeria-item .card {
+            border-radius: 14px;
+        }
+
+        #galeria .galeria-item .card-img-top.octogon {
+            height: 280px;
+        }
+
+        @media (max-width: 992px) {
+            #galeria .galeria-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            #galeria .galeria-item .card-img-top.octogon {
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            #galeria .galeria-grid {
+                grid-template-columns: 1fr;
+            }
+
+            #galeria .galeria-item .card-img-top.octogon {
+                height: 230px;
+            }
+        }
+
+        .contact-map iframe {
+            border: 0;
+            width: 100%;
+            min-height: 270px;
+            border-radius: 14px;
+        }
+
+        .contact-details a {
+            text-decoration: none;
+        }
+
+        .contact-item {
+            border: 1px solid rgba(15, 23, 42, 0.09);
+            border-radius: 12px;
+            padding: 1rem;
+            background: #fff;
+            display: flex;
+            gap: .75rem;
+            align-items: start;
+        }
+
+        .contact-item i {
+            color: var(--brand-primary);
+            font-size: 1.2rem;
+        }
+
+        .diferenciais-copy {
+            max-width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .diferenciais-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.25rem;
+            max-width: 1120px;
+            margin: 3rem auto 0;
+        }
+
+        .diferencial-card {
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            border-radius: 16px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+        }
+
+        .diferencial-card .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            gap: .8rem;
+            min-height: 245px;
+            text-align: center;
+        }
+
+        .diferencial-card .card-title {
+            margin-bottom: 0;
+            line-height: 1.2;
+        }
+
+        .diferencial-card p {
+            margin-bottom: 0;
+            line-height: 1.45;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .5s ease, transform .5s ease;
+        }
+
+        .reveal.show {
+            opacity: 1;
+            transform: none;
+        }
+
         @media (max-width: 992px) {
             .image-structure {
                 height: auto;
@@ -252,6 +460,14 @@
                 align-items: center;
                 gap: 1.5rem;
                 margin-bottom: 2rem;
+
+            .diferenciais-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .diferencial-card .card-body {
+                min-height: auto;
+            }
             }
 
             .img-octagon-wrapper,
@@ -274,6 +490,11 @@
                 bottom: 80px;
                 right: 15px;
             }
+
+            .mobile-cta {
+                display: flex;
+            }
+
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -308,14 +529,14 @@
     <a class="visually-hidden-focusable" href="#conteudo-principal">Ir para o conteúdo</a>
 
     <!-- Vídeo com poster; desativado em mobile pequeno via CSS -->
-    <video autoplay muted loop playsinline preload="metadata" class="video-bg" poster="images/bg-office-poster.jpg">
+    <video autoplay muted loop playsinline preload="metadata" class="video-bg" poster="images/servicos/servico-01.jpg">
         <source src="videos/bg-office.mp4" type="video/mp4" />
         Seu navegador não suporta vídeo.
     </video>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" aria-label="Menu principal">
         <div class="container">
-            <a class="navbar-brand" href="#">Fenicks</a>
+            <a class="navbar-brand" href="#conteudo-principal">Fenicks</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
                 <span class="navbar-toggler-icon"></span>
@@ -337,14 +558,14 @@
         <div class="container">
             <h1 class="fs-2 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">
                 Bem-vindo à Fenicks</h1>
-            <img src="images/fenicks-logo-preto.png" alt="Fenicks – Montagem de móveis corporativos" width="450"
-                height="120" style="max-width: 450px; height: auto; margin-bottom: 20px;" loading="lazy"
-                decoding="async" />
+            <img src="images/marca/fenicks-logo-preto.png" alt="Fenicks – Montagem de móveis corporativos" width="450"
+                height="120" style="max-width: 450px; height: auto; margin-bottom: 20px;" loading="eager"
+                fetchpriority="high" decoding="async" />
             <p class="fs-3 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">Gestão
                 de obras e mobiliário corporativo</p>
             <div class="d-flex gap-2 justify-content-center">
-                <a href="#sobre" class="btn btn-lg mt-3 btn-light">Quem somos</a>
-                <a href="#contato" class="btn btn-lg mt-3 btn-primary">Fale com a Fenicks</a>
+                <a href="#sobre" class="btn btn-lg mt-3 btn-light" data-track="hero_quem_somos" data-location="hero">Quem somos</a>
+                <a href="#contato" class="btn btn-lg mt-3 btn-primary" data-track="hero_fale_comercial" data-location="hero">Fale com a Fenicks</a>
             </div>
         </div>
     </header>
@@ -358,18 +579,9 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-md-6 mb-4 mb-md-0">
                         <div class="image-structure">
-                            <div class="img-octagon-wrapper img-top-left">
-                                <img src="images/obra_1.jpeg" class="img-octagon"
-                                    alt="Detalhe de obra corporativa – drywall e acabamento" loading="lazy"
-                                    decoding="async" width="200" height="200" />
-                            </div>
                             <div class="logo-central">
-                                <img src="images/fenicks-logo-preto.png" class="img-logo" alt="Logo Fenicks"
-                                    loading="lazy" decoding="async" width="200" height="200" />
-                            </div>
-                            <div class="img-octagon-wrapper img-bottom-right">
-                                <img src="images/obra_2.jpeg" class="img-octagon" alt="Montagem de estações de trabalho"
-                                    loading="lazy" decoding="async" width="200" height="200" />
+                                <img src="images/marca/fenicks-logo-preto.png" class="img-logo" alt="Logo Fenicks"
+                                    loading="lazy" decoding="async" width="280" height="280" />
                             </div>
                         </div>
                     </div>
@@ -437,7 +649,7 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-md-6">
                         <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                            <img src="images/projeto.jpeg" alt="Equipe executando obra corporativa"
+                            <img src="images/especialidades/especialidade-gestao-obras.jpg" alt="Equipe executando obra corporativa"
                                 class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
                         </div>
                     </div>
@@ -460,7 +672,7 @@
                 <div class="row align-items-center flex-row-reverse mb-5">
                     <div class="col-md-6">
                         <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                            <img src="images/mobiliario.jpeg" alt="Montagem e realocação de mobiliário corporativo"
+                            <img src="images/especialidades/especialidade-mobiliario.jpg" alt="Montagem e realocação de mobiliário corporativo"
                                 class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
                         </div>
                     </div>
@@ -483,7 +695,7 @@
                 <div class="row align-items-center mb-5">
                     <div class="col-md-6">
                         <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                            <img src="images/eletrica.jpeg"
+                            <img src="images/especialidades/especialidade-eletrica-rede.jpg"
                                 alt="Instalações elétricas e de rede em ambiente corporativo"
                                 class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
                         </div>
@@ -506,7 +718,7 @@
                 <div class="row align-items-center flex-row-reverse mb-5">
                     <div class="col-md-6">
                         <div class="img-octagon-destaque-wrapper mx-auto mb-4">
-                            <img src="images/reforma.jpeg" alt="Reformas internas e externas em prédio comercial"
+                            <img src="images/especialidades/especialidade-reforma.jpg" alt="Reformas internas e externas em prédio comercial"
                                 class="img-octagon-destaque" loading="lazy" decoding="async" width="700" height="700" />
                         </div>
                     </div>
@@ -526,7 +738,8 @@
 
                 <!-- CTA secundário para conversão -->
                 <div class="text-center mt-4">
-                    <a href="#contato" class="btn btn-primary btn-lg">
+                    <a href="#contato" class="btn btn-primary btn-lg" data-track="servicos_solicitar_orcamento"
+                        data-location="servicos">
                         <i class="bi bi-envelope-paper me-2" aria-hidden="true"></i>Solicitar orçamento
                     </a>
                 </div>
@@ -536,62 +749,52 @@
         <section id="diferenciais" class="section-padding bg-light" aria-labelledby="titulo-diferenciais">
             <div class="container text-center">
                 <h2 id="titulo-diferenciais" class="text-center mb-4">Soluções que transformam espaços corporativos</h2>
-                <div class="row justify-content-center">
-                    <div class="col-lg-12">
-                        <p class="lead" style="text-align: justify;">Aliamos <strong>experiência prática em
-                                campo</strong> com <strong>atendimento personalizado</strong>, entregando cada projeto
-                            com excelência, agilidade e comprometimento.</p>
-                        <div class="row mt-5 g-4" role="list">
-                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
-                                <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255,255,255,0.25);">
-                                    <div class="card-body">
-                                        <i class="bi bi-gear-wide-connected fs-1 text-primary mb-3"
-                                            aria-hidden="true"></i>
-                                        <h3 class="card-title h5">Experiência em campo</h3>
-                                        <p class="mb-0">Know-how técnico e prático em todas as etapas da obra.</p>
-                                    </div>
-                                </div>
+                <p class="lead diferenciais-copy">Aliamos <strong>experiência prática em campo</strong> com
+                    <strong>atendimento personalizado</strong>, entregando cada projeto com excelência, agilidade e
+                    comprometimento.</p>
+                <div class="diferenciais-grid" role="list">
+                    <div role="listitem">
+                        <div class="card diferencial-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-gear-wide-connected fs-1 text-primary" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Experiência em campo</h3>
+                                <p>Know-how técnico e prático em todas as etapas da obra.</p>
                             </div>
-                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
-                                <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255,255,255,0.25);">
-                                    <div class="card-body">
-                                        <i class="bi bi-clock-history fs-1 text-primary mb-3" aria-hidden="true"></i>
-                                        <h3 class="card-title h5">Cumprimento de prazos</h3>
-                                        <p class="mb-0">Execução rigorosa conforme cronograma definido.</p>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div role="listitem">
+                        <div class="card diferencial-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-clock-history fs-1 text-primary" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Cumprimento de prazos</h3>
+                                <p>Execução rigorosa conforme cronograma definido.</p>
                             </div>
-                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
-                                <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255,255,255,0.25);">
-                                    <div class="card-body">
-                                        <i class="bi bi-grid-3x3-gap fs-1 text-primary mb-3" aria-hidden="true"></i>
-                                        <h3 class="card-title h5">Obra + Mobiliário</h3>
-                                        <p class="mb-0">Integração completa entre ambiente físico e mobiliário.</p>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div role="listitem">
+                        <div class="card diferencial-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-grid-3x3-gap fs-1 text-primary" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Obra + Mobiliário</h3>
+                                <p>Integração completa entre ambiente físico e mobiliário.</p>
                             </div>
-                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
-                                <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255,255,255,0.25);">
-                                    <div class="card-body">
-                                        <i class="bi bi-headset fs-1 text-primary mb-3" aria-hidden="true"></i>
-                                        <h3 class="card-title h5">Suporte técnico</h3>
-                                        <p class="mb-0">Assistência completa do início ao fim da obra.</p>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div role="listitem">
+                        <div class="card diferencial-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-headset fs-1 text-primary" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Suporte técnico</h3>
+                                <p>Assistência completa do início ao fim da obra.</p>
                             </div>
-                            <div class="col-6 col-md-4 col-lg-2" role="listitem">
-                                <div class="card shadow-sm border-0 h-100"
-                                    style="background-color: rgba(255,255,255,0.25);">
-                                    <div class="card-body">
-                                        <i class="bi bi-person-check fs-1 text-primary mb-3" aria-hidden="true"></i>
-                                        <h3 class="card-title h5">Atendimento personalizado</h3>
-                                        <p class="mb-0">Soluções sob medida para a realidade do seu negócio.</p>
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div role="listitem">
+                        <div class="card diferencial-card h-100">
+                            <div class="card-body">
+                                <i class="bi bi-person-check fs-1 text-primary" aria-hidden="true"></i>
+                                <h3 class="card-title h5">Atendimento personalizado</h3>
+                                <p>Soluções sob medida para a realidade do seu negócio.</p>
                             </div>
                         </div>
                     </div>
@@ -607,50 +810,10 @@
                     Marilan e Caderode, atuando desde a montagem de ambientes até a gestão completa de obras. Nossa
                     expertise está presente em projetos de alta complexidade em todo o Brasil.</p>
 
-                <div class="row justify-content-center g-4" aria-label="Marcas atendidas">
-                    <div class="col-6 col-md-2">
-                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
-                            <img src="./images/logo-bradesco.svg" alt="Bradesco" class="img-fluid"
-                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
-                                height="60" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-2">
-                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
-                            <img src="./images/logo-itau.svg" alt="Itaú" class="img-fluid"
-                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
-                                height="60" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-2">
-                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
-                            <img src="./images/logo-latam.svg" alt="Latam" class="img-fluid"
-                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
-                                height="60" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-2">
-                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
-                            <img src="./images/logo-embraer.svg" alt="Embraer" class="img-fluid"
-                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
-                                height="60" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-2">
-                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
-                            <img src="./images/logo-coca.svg" alt="Coca-Cola" class="img-fluid"
-                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
-                                height="60" />
-                        </div>
-                    </div>
-                    <div class="col-6 col-md-2">
-                        <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
-                            <img src="./images/logo-marilan.png" alt="Marilan" class="img-fluid"
-                                style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160"
-                                height="60" />
-                        </div>
-                    </div>
-                </div>
+                <div id="clientesGrid" class="row justify-content-center g-4" aria-label="Marcas atendidas"></div>
+                <p id="clientesVazio" class="text-center mt-4 d-none">Nenhum logo encontrado em
+                    <strong>images/clientes</strong>. Adicione arquivos no formato <strong>cliente-01.svg</strong>,
+                    <strong>cliente-02.svg</strong>...</p>
 
                 <div class="row mt-5">
                     <div class="col-md-4">
@@ -691,98 +854,110 @@
                     realizados pela Fenicks em todo o Brasil. Entregamos ambientes completos, modernos e funcionais para
                     escritórios, bancos, indústrias e empresas de diversos segmentos.</p>
 
-                <div class="row g-4">
-                    <!-- Repita os itens conforme necessário -->
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="images/obra_1.jpeg" class="card-img-top img-fluid octogon"
-                                alt="Montagem de agência bancária em Brasília" loading="lazy" decoding="async"
-                                width="800" height="600" />
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="images/obra_2.jpeg" class="card-img-top img-fluid octogon"
-                                alt="Instalação de estações de trabalho e cabeamento" loading="lazy" decoding="async"
-                                width="800" height="600" />
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="images/obra_3.jpeg" class="card-img-top img-fluid octogon"
-                                alt="Reforma de piso e pintura em escritório corporativo" loading="lazy"
-                                decoding="async" width="800" height="600" />
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="images/obra_4.jpeg" class="card-img-top img-fluid octogon"
-                                alt="Instalação elétrica e de rede – rack organizado" loading="lazy" decoding="async"
-                                width="800" height="600" />
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="images/obra_5.jpeg" class="card-img-top img-fluid octogon"
-                                alt="Divisórias em drywall e acabamento fino" loading="lazy" decoding="async"
-                                width="800" height="600" />
-                        </div>
-                    </div>
-                    <div class="col-12 col-sm-6 col-md-4">
-                        <div class="card shadow-sm border-0 h-100">
-                            <img src="images/obra_1.jpeg" class="card-img-top img-fluid octogon"
-                                alt="Montagem de mobiliário em open space" loading="lazy" decoding="async" width="800"
-                                height="600" />
-                        </div>
-                    </div>
-                </div>
+                <div id="galeriaGrid" class="galeria-grid" role="list" aria-label="Galeria de obras realizadas"></div>
+                <p id="galeriaVazia" class="text-center mt-4 d-none">Nenhuma imagem encontrada em
+                    <strong>images/servicos</strong>. Adicione arquivos no formato <strong>servico-01.jpg</strong>,
+                    <strong>servico-02.jpg</strong>...</p>
             </div>
         </section>
 
         <section id="contato" class="section-padding bg-light" aria-labelledby="titulo-contato">
             <div class="container">
-                <h2 id="titulo-contato" class="text-center mb-4">Entre em Contato</h2>
-                <form action="https://formsubmit.co/contato@fenicks.com.br" method="POST" class="needs-validation"
-                    novalidate>
-                    <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" id="nome" class="form-control" name="nome" placeholder="Seu nome" required
-                            autocomplete="name" />
-                        <div class="invalid-feedback">Informe seu nome.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">E-mail</label>
-                        <input type="email" id="email" class="form-control" name="email" placeholder="Seu e-mail"
-                            required autocomplete="email" inputmode="email" />
-                        <div class="invalid-feedback">Informe um e-mail válido.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="telefone" class="form-label">Telefone</label>
-                        <input type="tel" id="telefone" class="form-control" name="telefone"
-                            placeholder="(11) 99311-5760" required autocomplete="tel"
-                            pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" inputmode="tel" />
-                        <div class="invalid-feedback">Informe um telefone válido.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensagem" class="form-label">Mensagem</label>
-                        <textarea id="mensagem" class="form-control" name="mensagem" rows="4" placeholder="Sua mensagem"
-                            required></textarea>
-                        <div class="invalid-feedback">Escreva sua mensagem.</div>
-                    </div>
-                    <!-- LGPD -->
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" value="1" id="lgpd" required />
-                        <label class="form-check-label" for="lgpd">Autorizo o contato da Fenicks para prosseguimento do
-                            meu atendimento e concordo com a Política de Privacidade.</label>
-                        <div class="invalid-feedback">Para enviar, é necessário aceitar nossa Política de Privacidade.
+                <div class="text-center mb-4 reveal">
+                    <p class="section-title-kicker">Atendimento comercial</p>
+                    <h2 id="titulo-contato">Entre em Contato</h2>
+                    <p class="lead mb-0">Escolha o canal mais rapido para seu time: resposta por WhatsApp, e-mail ou
+                        formulario.</p>
+                </div>
+
+                <div class="row g-4 align-items-stretch">
+                    <div class="col-lg-5 reveal">
+                        <div class="glass-card p-4 h-100 contact-details">
+                            <h3 class="h4 mb-3">Canais diretos</h3>
+                            <div class="d-grid gap-3 mb-4">
+                                <div class="contact-item">
+                                    <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>WhatsApp</strong>
+                                        <p class="mb-1">Atendimento comercial imediato.</p>
+                                        <a href="https://wa.me/5511993115760?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20sobre%20um%20projeto%20corporativo."
+                                            target="_blank" rel="noopener" data-track="contato_whatsapp_card"
+                                            data-location="contato">(11) 99311-5760</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="bi bi-envelope" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>E-mail</strong>
+                                        <p class="mb-1">Envie briefing e anexos.</p>
+                                        <a href="mailto:contato@fenicks.com.br" data-track="contato_email"
+                                            data-location="contato">contato@fenicks.com.br</a>
+                                    </div>
+                                </div>
+                                <div class="contact-item">
+                                    <i class="bi bi-clock" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Horario comercial</strong>
+                                        <p class="mb-0">Segunda a sexta, das 8h as 18h.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="contact-map ratio ratio-4x3" aria-label="Mapa de atendimento Fenicks">
+                                <iframe title="Mapa de atuacao Fenicks"
+                                    src="https://www.google.com/maps?q=S%C3%A3o%20Paulo%2C%20SP&output=embed"
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
                         </div>
                     </div>
-                    <!-- Honeypot + redirect -->
-                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_next" value="https://SEU-DOMINIO/obrigado.html" />
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
+
+                    <div class="col-lg-7 reveal">
+                        <div class="glass-card p-4 p-md-5 h-100">
+                            <h3 class="h4 mb-3">Envie sua solicitacao</h3>
+                            <form action="https://formsubmit.co/contato@fenicks.com.br" method="POST"
+                                class="needs-validation" novalidate id="form-contato">
+                                <div class="mb-3">
+                                    <label for="nome" class="form-label">Nome</label>
+                                    <input type="text" id="nome" class="form-control" name="nome" placeholder="Seu nome"
+                                        required autocomplete="name" />
+                                    <div class="invalid-feedback">Informe seu nome.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">E-mail</label>
+                                    <input type="email" id="email" class="form-control" name="email"
+                                        placeholder="Seu e-mail" required autocomplete="email" inputmode="email" />
+                                    <div class="invalid-feedback">Informe um e-mail valido.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="telefone" class="form-label">Telefone</label>
+                                    <input type="tel" id="telefone" class="form-control" name="telefone"
+                                        placeholder="(11) 99311-5760" required autocomplete="tel"
+                                        pattern="^\(?\d{2}\)?\s?\d{4,5}-?\d{4}$" inputmode="tel" />
+                                    <div class="invalid-feedback">Informe um telefone valido.</div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensagem" class="form-label">Mensagem</label>
+                                    <textarea id="mensagem" class="form-control" name="mensagem" rows="4"
+                                        placeholder="Sua mensagem" required></textarea>
+                                    <div class="invalid-feedback">Escreva sua mensagem.</div>
+                                </div>
+                                <div class="form-check mb-3">
+                                    <input class="form-check-input" type="checkbox" value="1" id="lgpd" required />
+                                    <label class="form-check-label" for="lgpd">Autorizo o contato da Fenicks para
+                                        prosseguimento do meu atendimento e concordo com a Politica de Privacidade.</label>
+                                    <div class="invalid-feedback">Para enviar, e necessario aceitar nossa Politica de
+                                        Privacidade.</div>
+                                </div>
+                                <input type="text" name="_honey" style="display:none" tabindex="-1"
+                                    autocomplete="off" />
+                                <input type="hidden" name="_captcha" value="false" />
+                                   <input type="hidden" name="_next" value="https://www.fenicks.com.br/obrigado.html" id="form-next-url" />
+                                <button type="submit" class="btn btn-primary" data-track="contato_form_enviar"
+                                    data-location="contato">Enviar</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -791,24 +966,65 @@
         <p class="mb-0">&copy; <span id="ano"></span> Fenicks. Todos os direitos reservados.</p>
     </footer>
 
-    <a href="https://wa.me/5561998246913?text=Ol%C3%A1%20gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20da%20Fenicks!"
-        target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato via WhatsApp">
+    <a href="https://wa.me/5511993115760?text=Ol%C3%A1%20gostaria%20de%20saber%20mais%20sobre%20as%20solu%C3%A7%C3%B5es%20da%20Fenicks!"
+        target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato via WhatsApp"
+        id="cta-whatsapp-float" data-track="whatsapp_float" data-location="global">
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>
+
+    <div class="mobile-cta" aria-label="Acoes rapidas">
+        <a href="https://wa.me/5511993115760?text=Ol%C3%A1%20gostaria%20de%20um%20or%C3%A7amento%20da%20Fenicks."
+            class="btn btn-success" target="_blank" rel="noopener" data-track="mobile_whatsapp"
+            data-location="mobile">WhatsApp</a>
+        <a href="#contato" class="btn btn-primary" data-track="mobile_contato" data-location="mobile">Orcamento</a>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
     <script>
+        function trackEvent(eventName, eventParams = {}) {
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, eventParams);
+            }
+        }
+
+            const nextUrlInput = document.getElementById('form-next-url');
+            if (nextUrlInput) {
+                nextUrlInput.value = new URL('obrigado.html', window.location.href).toString();
+            }
+
         // Ano no footer
         document.getElementById('ano').textContent = new Date().getFullYear();
 
         // Scroll suave para âncoras (fallback se não existir alvo)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
+                const href = this.getAttribute('href');
+                if (!href || href.length < 2) return;
+                const target = document.querySelector(href);
                 if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+
+        // Fecha menu mobile ao selecionar item
+        const navbarCollapse = document.getElementById('navbarNav');
+        document.querySelectorAll('.navbar .nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navbarCollapse.classList.contains('show')) {
+                    bootstrap.Collapse.getOrCreateInstance(navbarCollapse).hide();
+                }
+            });
+        });
+
+        // Rastreamento de CTAs
+        document.querySelectorAll('[data-track]').forEach(element => {
+            element.addEventListener('click', () => {
+                trackEvent('cta_click', {
+                    cta_name: element.dataset.track,
+                    cta_location: element.dataset.location || 'site'
+                });
             });
         });
 
@@ -836,10 +1052,27 @@
             Array.from(forms).forEach(form => {
                 form.addEventListener('submit', e => {
                     if (!form.checkValidity()) { e.preventDefault(); e.stopPropagation(); }
+                    else {
+                        trackEvent('generate_lead', {
+                            lead_source: 'form_contato',
+                            page_path: window.location.pathname
+                        });
+                    }
                     form.classList.add('was-validated');
                 }, false);
             });
         })();
+
+        // Animacao de entrada por scroll
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
     </script>
 
     <!-- Modal de visualização da imagem (acessível) -->
@@ -857,8 +1090,122 @@
     </div>
 
     <script>
-        // Delegação para abrir o modal da galeria + suporte a teclado
         const galeria = document.getElementById('galeria');
+        const galeriaGrid = document.getElementById('galeriaGrid');
+        const galeriaVazia = document.getElementById('galeriaVazia');
+        const clientesGrid = document.getElementById('clientesGrid');
+        const clientesVazio = document.getElementById('clientesVazio');
+
+        const SERVICOS_GALERIA_CONFIG = {
+            basePath: 'images/servicos',
+            filePrefix: 'servico-',
+            maxFiles: 40,
+            extensions: ['webp', 'jpg', 'jpeg', 'png']
+        };
+
+        const CLIENTES_LOGOS_CONFIG = {
+            basePath: 'images/clientes',
+            filePrefix: 'cliente-',
+            maxFiles: 40,
+            extensions: ['svg', 'webp', 'png', 'jpg', 'jpeg']
+        };
+
+        const padNumber = (number) => String(number).padStart(2, '0');
+
+        const imageExists = (src) => new Promise((resolve) => {
+            const testImage = new Image();
+            testImage.onload = () => resolve(true);
+            testImage.onerror = () => resolve(false);
+            testImage.src = src;
+        });
+
+        async function getSequentialImages(config, altPrefix) {
+            const foundImages = [];
+
+            for (let index = 1; index <= config.maxFiles; index += 1) {
+                const imageNumber = padNumber(index);
+                let validSrc = null;
+
+                for (const extension of config.extensions) {
+                    const src = `${config.basePath}/${config.filePrefix}${imageNumber}.${extension}`;
+                    // Tenta os formatos suportados para cada número e usa o primeiro existente.
+                    if (await imageExists(src)) {
+                        validSrc = src;
+                        break;
+                    }
+                }
+
+                if (validSrc) {
+                    foundImages.push({
+                        src: validSrc,
+                        alt: `${altPrefix} ${imageNumber}`
+                    });
+                }
+            }
+
+            return foundImages;
+        }
+
+        function renderServicoGallery(images) {
+            if (!galeriaGrid) return;
+
+            galeriaGrid.innerHTML = '';
+
+            if (!images.length) {
+                if (galeriaVazia) galeriaVazia.classList.remove('d-none');
+                return;
+            }
+
+            if (galeriaVazia) galeriaVazia.classList.add('d-none');
+
+            images.forEach((image) => {
+                const item = document.createElement('div');
+                item.className = 'galeria-item';
+                item.setAttribute('role', 'listitem');
+
+                item.innerHTML = `
+                    <div class="card shadow-sm border-0 h-100">
+                        <img src="${image.src}" class="card-img-top img-fluid octogon" alt="${image.alt}" loading="lazy" decoding="async" width="800" height="600" tabindex="0" />
+                    </div>
+                `;
+
+                galeriaGrid.appendChild(item);
+            });
+        }
+
+        function renderClientesGrid(images) {
+            if (!clientesGrid) return;
+
+            clientesGrid.innerHTML = '';
+
+            if (!images.length) {
+                if (clientesVazio) clientesVazio.classList.remove('d-none');
+                return;
+            }
+
+            if (clientesVazio) clientesVazio.classList.add('d-none');
+
+            images.forEach((image) => {
+                const col = document.createElement('div');
+                col.className = 'col-6 col-md-2';
+
+                col.innerHTML = `
+                    <div class="card shadow-sm border-0 p-4 h-100 align-items-center d-flex">
+                        <img src="${image.src}" alt="${image.alt}" class="img-fluid" style="height: 60px; object-fit: contain;" loading="lazy" decoding="async" width="160" height="60" />
+                    </div>
+                `;
+
+                clientesGrid.appendChild(col);
+            });
+        }
+
+        // Carrega automaticamente as imagens da pasta images/servicos.
+        getSequentialImages(SERVICOS_GALERIA_CONFIG, 'Servico realizado pela Fenicks').then(renderServicoGallery);
+
+        // Carrega automaticamente os logos da pasta images/clientes.
+        getSequentialImages(CLIENTES_LOGOS_CONFIG, 'Logo de cliente Fenicks').then(renderClientesGrid);
+
+        // Delegação para abrir o modal da galeria + suporte a teclado.
         galeria.addEventListener('click', (e) => {
             const img = e.target.closest('img');
             if (!img) return;
@@ -866,13 +1213,13 @@
             new bootstrap.Modal(document.getElementById('modalImagem')).show();
         });
 
-        galeria.querySelectorAll('img').forEach(img => {
-            img.tabIndex = 0;
-            img.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    img.click(); e.preventDefault();
-                }
-            });
+        galeria.addEventListener('keydown', (e) => {
+            const img = e.target.closest('img');
+            if (!img) return;
+            if (e.key === 'Enter' || e.key === ' ') {
+                img.click();
+                e.preventDefault();
+            }
         });
     </script>
 </body>

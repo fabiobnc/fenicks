@@ -1,0 +1,22 @@
+# Python virtual environment
+.venv/
+venv/
+env/
+
+# Python cache / bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local editor/system artifacts
+.DS_Store
+Thumbs.db
+.vscode/.ropeproject/
+
+# Local archives/backups
+docs.zip
