@@ -39,11 +39,21 @@
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    "@type": "LocalBusiness",
     "name": "Fenicks",
     "url": "https://www.fenicks.com.br/",
     "logo": "https://www.fenicks.com.br/images/marca/fenicks-logo-preto.png",
+    "image": "https://www.fenicks.com.br/images/marca/logo-fenicks.png",
+    "description": "Gestão de obras, montagem de mobiliário corporativo e manutenção predial.",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Osasco",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "areaServed": ["Osasco", "Grande São Paulo", "Estado de São Paulo", "Brasil"],
     "sameAs": [
+    "https://www.instagram.com/fenicks__/",
     "https://www.linkedin.com/company/fenicks"
     ],
     "contactPoint": [{
@@ -556,13 +566,13 @@
 
     <header class="hero-content text-center" role="banner">
         <div class="container">
-            <h1 class="fs-2 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">
-                Bem-vindo à Fenicks</h1>
+            <p class="fs-2 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">
+                Bem-vindo à Fenicks</p>
             <img src="images/marca/fenicks-logo-preto.png" alt="Fenicks – Montagem de móveis corporativos" width="450"
                 height="120" style="max-width: 450px; height: auto; margin-bottom: 20px;" loading="eager"
                 fetchpriority="high" decoding="async" />
-            <p class="fs-3 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">Gestão
-                de obras e mobiliário corporativo</p>
+            <h1 class="fs-3 fw-bold text-white px-4 py-2 rounded" style="background-color: rgba(0, 0, 0, 0.65);">Gestão
+                de obras, mobiliário corporativo e manutenção predial</h1>
             <div class="d-flex gap-2 justify-content-center">
                 <a href="#sobre" class="btn btn-lg mt-3 btn-light" data-track="hero_quem_somos" data-location="hero">Quem somos</a>
                 <a href="#contato" class="btn btn-lg mt-3 btn-primary" data-track="hero_fale_comercial" data-location="hero">Fale com a Fenicks</a>
@@ -901,11 +911,19 @@
                                         <p class="mb-0">Segunda a sexta, das 8h às 18h.</p>
                                     </div>
                                 </div>
+                                <div class="contact-item">
+                                    <i class="bi bi-geo-alt" aria-hidden="true"></i>
+                                    <div>
+                                        <strong>Onde atuamos</strong>
+                                        <p class="mb-0">Sede em Osasco/SP. Atendemos a Grande São Paulo, o estado de
+                                            São Paulo e, conforme o projeto, todo o Brasil.</p>
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="contact-map ratio ratio-4x3" aria-label="Mapa de atendimento Fenicks">
                                 <iframe title="Mapa de atuação Fenicks"
-                                    src="https://www.google.com/maps?q=S%C3%A3o%20Paulo%2C%20SP&output=embed"
+                                    src="https://www.google.com/maps?q=Osasco%2C%20SP&output=embed"
                                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
@@ -962,6 +980,14 @@
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
+        <div class="mb-2">
+            <a href="https://www.instagram.com/fenicks__/" target="_blank" rel="noopener"
+                class="text-white fs-4 mx-2" aria-label="Instagram da Fenicks" data-track="footer_instagram"
+                data-location="footer"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/5511988732516" target="_blank" rel="noopener" class="text-white fs-4 mx-2"
+                aria-label="WhatsApp da Fenicks" data-track="footer_whatsapp" data-location="footer"><i
+                    class="bi bi-whatsapp" aria-hidden="true"></i></a>
+        </div>
         <p class="mb-0">&copy; <span id="ano"></span> Fenicks. Todos os direitos reservados.</p>
     </footer>
 
@@ -1118,31 +1144,27 @@
             testImage.src = src;
         });
 
-        async function getSequentialImages(config, altPrefix) {
-            const foundImages = [];
-
-            for (let index = 1; index <= config.maxFiles; index += 1) {
-                const imageNumber = padNumber(index);
-                let validSrc = null;
-
-                for (const extension of config.extensions) {
-                    const src = `${config.basePath}/${config.filePrefix}${imageNumber}.${extension}`;
-                    // Tenta os formatos suportados para cada número e usa o primeiro existente.
-                    if (await imageExists(src)) {
-                        validSrc = src;
-                        break;
-                    }
-                }
-
-                if (validSrc) {
-                    foundImages.push({
-                        src: validSrc,
-                        alt: `${altPrefix} ${imageNumber}`
-                    });
+        async function findImageForNumber(config, imageNumber) {
+            for (const extension of config.extensions) {
+                const src = `${config.basePath}/${config.filePrefix}${imageNumber}.${extension}`;
+                // Tenta os formatos suportados para cada número e usa o primeiro existente.
+                if (await imageExists(src)) {
+                    return src;
                 }
             }
+            return null;
+        }
 
-            return foundImages;
+        async function getSequentialImages(config, altPrefix) {
+            // Verifica todos os números em paralelo, preservando a ordem no resultado.
+            const checks = [];
+            for (let index = 1; index <= config.maxFiles; index += 1) {
+                const imageNumber = padNumber(index);
+                checks.push(findImageForNumber(config, imageNumber).then(src => (
+                    src ? { src, alt: `${altPrefix} ${imageNumber}` } : null
+                )));
+            }
+            return (await Promise.all(checks)).filter(Boolean);
         }
 
         function renderServicoGallery(images) {
