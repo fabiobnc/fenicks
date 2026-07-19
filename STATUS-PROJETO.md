@@ -13,7 +13,7 @@ estado de SP e, conforme o projeto, outros estados.
 - **Publicação:** GitHub Pages servindo a pasta `docs/` no domínio `www.fenicks.com.br` (via `docs/CNAME`)
 - **Stack:** HTML estático + Bootstrap 5 (CDN). Sem build — editar e commitar já publica.
 - **Páginas:** `index.html` (única página do site), `privacidade.html`, `obrigado.html` (pós-formulário, com noindex)
-- **Formulário:** envia via formsubmit.co para `vendas.fenicks@hotmail.com`
+- **Formulário:** envia via formsubmit.co para `contato@fenicks.com.br`
 - **Galeria e logos de clientes:** carregam automaticamente por convenção de nome de arquivo
   (`docs/images/servicos/servico-01.jpg...` e `docs/images/clientes/cliente-01.svg...`) — para
   adicionar foto nova, basta subir o arquivo seguindo a numeração.
@@ -56,7 +56,7 @@ Principais achados:
 ## Pendente — tarefas de código (para o Claude na próxima sessão)
 
 - [ ] Trocar o ID do GA4 quando o Fabio criar a conta (item 1 acima)
-- [ ] Trocar `vendas.fenicks@hotmail.com` pelo e-mail no domínio (formulário + card de contato) quando o Zoho estiver ativo
+- [x] Trocar `vendas.fenicks@hotmail.com` pelo e-mail no domínio (formulário + card de contato) quando o Zoho estiver ativo
 - [ ] Adicionar link do Facebook no rodapé e no JSON-LD quando tiver a URL
 - [ ] **Seção de cases** com antes/depois e números (ex.: "reforma de agência em X dias") — conteúdo a coletar com o Fabio
 - [ ] **Depoimentos** de clientes (coletar 1–2 citações autorizadas)
