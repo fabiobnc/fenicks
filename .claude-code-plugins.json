@@ -1,0 +1,6 @@
+{
+  "plugins": [
+    "frontend-design@claude-code-plugins",
+    "claude-seo@claude-code-plugins"
+  ]
+}
