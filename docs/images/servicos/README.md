@@ -1,23 +1,20 @@
 # Guia rapido - imagens de Servicos Realizados
 
-Esta pasta alimenta automaticamente a secao "Servicos Realizados" no site.
+Esta pasta contem as fotos da secao "Servicos Realizados" do site.
 
 ## Como atualizar
 
-1. Coloque as imagens nesta pasta: `docs/images/servicos/`
-2. Use nomes no padrao:
-   - `servico-01.jpg`
-   - `servico-02.jpg`
-   - `servico-03.jpg`
-3. Voce pode usar as extensoes: `.webp`, `.jpg`, `.jpeg`, `.png`
-4. Para remover uma imagem do site, basta apagar o arquivo da pasta.
+1. Coloque a imagem nesta pasta: `docs/images/servicos/`
+2. Use nomes no padrao: `servico-01.jpg`, `servico-02.jpg`...
+3. Edite o `docs/index.html`, secao `#galeria`: copie um bloco
+   `<div class="galeria-item">...</div>` existente e ajuste:
+   - o `src` para o novo arquivo
+   - o `alt` com uma descricao real da foto (importante para SEO e acessibilidade)
+   - os atributos `width`/`height` com as dimensoes reais da imagem
+4. Para remover uma imagem, apague o arquivo E o bloco correspondente no HTML.
 
-## Regras importantes
-
-- O numero deve ter 2 digitos (`01`, `02`, `03`...)
-- O site procura automaticamente de `servico-01` ate `servico-40`
-- Pode haver "buracos" (exemplo: existe `01`, `02`, `04`) e o site continua funcionando
-- Nao precisa editar o HTML para trocar imagens
+> As imagens agora sao declaradas direto no HTML (sem carregamento automatico).
+> Isso elimina centenas de requisicoes desnecessarias e permite descricoes reais.
 
 ## Recomendacao de qualidade
 

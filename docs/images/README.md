@@ -11,17 +11,20 @@ As imagens do site foram separadas por contexto para facilitar manutencao.
 - `images/especialidades/`
   - Imagens dos blocos de especialidades (servicos principais)
 - `images/servicos/`
-  - Galeria da secao "Servicos Realizados" (carregamento automatico)
+  - Galeria da secao "Servicos Realizados"
 
 ## Regras de atualizacao
 
 1. Galeria de Servicos Realizados:
    - Pasta: `images/servicos/`
    - Nome: `servico-01.jpg`, `servico-02.jpg`...
-   - O site identifica automaticamente.
+   - Alem de adicionar o arquivo, edite a secao `#galeria` do `index.html`
+     (veja o README da pasta `servicos/`).
 2. Logos de clientes:
    - Pasta: `images/clientes/`
-  - Nome: `cliente-01.svg`, `cliente-02.svg`...
+   - Nome: `cliente-01.svg`, `cliente-02.svg`...
+   - Alem de adicionar o arquivo, edite a secao `#clientes` do `index.html`
+     (veja o README da pasta `clientes/`).
 3. Marca:
    - Pasta: `images/marca/`
    - Nao alterar nomes atuais sem atualizar o HTML.
