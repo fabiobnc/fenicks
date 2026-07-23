@@ -12,11 +12,14 @@ estado de SP e, conforme o projeto, outros estados.
 
 - **Publicação:** GitHub Pages servindo a pasta `docs/` no domínio `www.fenicks.com.br` (via `docs/CNAME`)
 - **Stack:** HTML estático + Bootstrap 5 (CDN). Sem build — editar e commitar já publica.
-- **Páginas:** `index.html` (única página do site), `privacidade.html`, `obrigado.html` (pós-formulário, com noindex)
+- **Páginas:** `index.html`, `privacidade.html`, `obrigado.html` (noindex), `404.html`,
+  e 6 páginas de serviço em `docs/servicos/<slug>/index.html` (montagem-de-moveis-corporativos,
+  remanejamento-de-layout, manutencao-predial, drywall-e-divisorias,
+  instalacao-eletrica-e-cabeamento, gestao-de-obras)
 - **Formulário:** envia via formsubmit.co para `contato@fenicks.com.br`
-- **Galeria e logos de clientes:** carregam automaticamente por convenção de nome de arquivo
-  (`docs/images/servicos/servico-01.jpg...` e `docs/images/clientes/cliente-01.svg...`) — para
-  adicionar foto nova, basta subir o arquivo seguindo a numeração.
+- **Galeria e logos de clientes:** declarados direto no HTML da home (desde 23/07/2026 —
+  o carregamento automático por numeração foi removido). Para adicionar foto/logo, suba o
+  arquivo E edite a seção correspondente do `index.html` (ver READMEs em `docs/images/`).
 
 ## Diagnóstico feito em 07/07/2026
 
@@ -46,9 +49,9 @@ Principais achados:
 
 | # | Tarefa | Onde | Observação |
 |---|---|---|---|
-| 1 | Criar propriedade **GA4** e pegar o ID `G-...` | [analytics.google.com](https://analytics.google.com) | Grátis. Depois trocar `G-XXXXXXXXXX` na linha ~60 do `docs/index.html`. Correção nº 1: sem isso não medimos nada |
-| 2 | Cadastrar site no **Google Search Console** e enviar o sitemap | [search.google.com/search-console](https://search.google.com/search-console) | Verificar o domínio e submeter `https://www.fenicks.com.br/sitemap.xml` |
-| 3 | Criar **Google Business Profile** | [google.com/business](https://www.google.com/business/) | Modelo "empresa com área de cobertura": sede Osasco, atende Grande SP/estado. Depois pedir avaliação a cada cliente |
+| 1 | Criar propriedade **GA4** e pegar o ID `G-...` | [analytics.google.com](https://analytics.google.com) | Grátis. Depois avisar o Claude para trocar `G-XXXXXXXXXX` nos 7 arquivos (index + 6 páginas de serviço). Correção nº 1: sem isso não medimos nada |
+| 2 | Cadastrar site no **Google Search Console** e enviar o sitemap | [search.google.com/search-console](https://search.google.com/search-console) | Verificar o domínio e submeter `https://www.fenicks.com.br/sitemap.xml` (já inclui as páginas de serviço) |
+| 3 | Criar **Google Business Profile** | [google.com/business](https://www.google.com/business/) | **Seguir o passo a passo pronto em `SEO-GBP.md`** (categorias, serviços, descrição, avaliações, posts) |
 | 4 | Criar e-mail no domínio (**Zoho Mail**, plano grátis) | [zoho.com/mail](https://www.zoho.com/mail/) | Requer acesso ao DNS do domínio (Registro.br?). Criar `contato@fenicks.com.br` |
 | 5 | Passar o link da **página do Facebook** | — | Para adicionar no rodapé e no JSON-LD |
 | 6 | Executar o plano do Instagram | `ESTRATEGIA-INSTAGRAM.md` | Conta comercial, Business Manager, planejador, 2–3 posts/semana |
@@ -60,10 +63,12 @@ Principais achados:
 - [ ] Adicionar link do Facebook no rodapé e no JSON-LD quando tiver a URL
 - [ ] **Seção de cases** com antes/depois e números (ex.: "reforma de agência em X dias") — conteúdo a coletar com o Fabio
 - [ ] **Depoimentos** de clientes (coletar 1–2 citações autorizadas)
-- [ ] **Legendas e alt-text descritivos na galeria** (hoje é genérico: "Servico realizado pela Fenicks 01")
-- [ ] **Seção FAQ** ("Atendem fora de SP?", "Prazo médio?", "Emitem ART?")
+- [x] **Legendas e alt-text descritivos na galeria** (feito em 23/07/2026 — galeria estática com alts reais)
+- [x] **Seção FAQ** (feito em 23/07/2026 — 3 perguntas por página de serviço; "Emitem ART?" ficou de fora por falta de confirmação do Fabio)
 - [ ] Avaliar converter imagens JPG para WebP (peso da página)
-- [ ] Futuro: avaliar páginas separadas por serviço para SEO (hoje é página única)
+- [x] Páginas separadas por serviço para SEO (feito em 23/07/2026 — 6 páginas em `docs/servicos/`, no menu, com JSON-LD Service e sitemap atualizado)
+- [ ] Trocar e-mail exposto do FormSubmit pelo endpoint com hash (anti-spam) — Fabio precisa pegar o hash no e-mail de ativação do FormSubmit
+- [ ] Recomprimir `videos/bg-office.mp4` (~6 MB → ~1,5 MB; hoje o carregamento é adiado via JS, mas o arquivo segue pesado)
 
 ## Atenções
 

@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description"
+        content="Planejamento, supervisão técnica e execução de reformas corporativas, com relatórios e gestão de fornecedores. Sede em Osasco/SP, projetos em todo o Brasil." />
+    <title>Gestão de Obras e Reforma de Escritório em SP | Fenicks</title>
+    <link rel="icon" href="/images/marca/favicon.png" type="image/png" />
+    <link rel="canonical" href="https://www.fenicks.com.br/servicos/gestao-de-obras/" />
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Open Graph / Twitter Cards -->
+    <meta property="og:title" content="Gestão de Obras e Reformas Corporativas | Fenicks" />
+    <meta property="og:description"
+        content="Planejamento, supervisão técnica e execução de reformas corporativas com relatórios e gestão de fornecedores." />
+    <meta property="og:image"
+        content="https://www.fenicks.com.br/images/especialidades/especialidade-gestao-obras.jpg" />
+    <meta property="og:image:width" content="2048" />
+    <meta property="og:image:height" content="1365" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.fenicks.com.br/servicos/gestao-de-obras/" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="Fenicks" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Gestão de Obras e Reformas Corporativas | Fenicks" />
+    <meta name="twitter:description"
+        content="Planejamento, supervisão técnica e execução de reformas corporativas." />
+    <meta name="twitter:image"
+        content="https://www.fenicks.com.br/images/especialidades/especialidade-gestao-obras.jpg" />
+
+    <!-- JSON-LD: Service + Breadcrumb -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Gestão de Obras e Reformas Corporativas",
+    "serviceType": "Gestão de obras e reforma de escritórios",
+    "url": "https://www.fenicks.com.br/servicos/gestao-de-obras/",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Fenicks",
+      "url": "https://www.fenicks.com.br/",
+      "telephone": "+55-11-98873-2516",
+      "email": "contato@fenicks.com.br",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Osasco",
+        "addressRegion": "SP",
+        "addressCountry": "BR"
+      }
+    },
+    "areaServed": ["Osasco", "Grande São Paulo", "Estado de São Paulo", "Brasil"]
+  }
+  </script>
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.fenicks.com.br/" },
+      { "@type": "ListItem", "position": 2, "name": "Serviços", "item": "https://www.fenicks.com.br/#servicos" },
+      { "@type": "ListItem", "position": 3, "name": "Gestão de Obras e Reformas" }
+    ]
+  }
+  </script>
+
+    <!-- GA4: substitua G-XXXXXXXXXX pelo seu Measurement ID real -->
+    <script>
+        window.FENICKS_GA4_ID = 'G-XXXXXXXXXX';
+        const gaScript = document.createElement('script');
+        gaScript.async = true;
+        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${window.FENICKS_GA4_ID}`;
+        document.head.appendChild(gaScript);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', window.FENICKS_GA4_ID, {
+            anonymize_ip: true,
+            transport_type: 'beacon'
+        });
+    </script>
+
+    <style>
+        :root {
+            --navbar-offset: 90px;
+            --brand-dark: #111827;
+            --brand-ink: #0f172a;
+            --brand-primary: #0b4fcf;
+            --brand-accent: #1e88e5;
+            --brand-soft: #eaf1ff;
+            --oct: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+            --bs-primary: #0b4fcf;
+            --bs-primary-rgb: 11, 79, 207;
+            --bs-link-color: #0b4fcf;
+            --bs-link-color-rgb: 11, 79, 207;
+            --bs-link-hover-color: #0a43ad;
+            --bs-link-hover-color-rgb: 10, 67, 173;
+        }
+
+        .btn-primary {
+            --bs-btn-bg: var(--brand-primary);
+            --bs-btn-border-color: var(--brand-primary);
+            --bs-btn-hover-bg: #0a43ad;
+            --bs-btn-hover-border-color: #0a43ad;
+            --bs-btn-active-bg: #093a96;
+            --bs-btn-active-border-color: #093a96;
+            --bs-btn-disabled-bg: var(--brand-primary);
+            --bs-btn-disabled-border-color: var(--brand-primary);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Work Sans', sans-serif;
+            color: var(--brand-ink);
+            background: radial-gradient(circle at 20% 10%, #f2f6ff 0%, #f8fafc 40%, #eef2f7 100%);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        .navbar-brand,
+        .btn {
+            font-family: 'Sora', sans-serif;
+            letter-spacing: -0.01em;
+        }
+
+        section[id] {
+            scroll-margin-top: var(--navbar-offset);
+        }
+
+        .navbar {
+            background: rgba(12, 18, 28, 0.95) !important;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.28);
+        }
+
+        .page-header {
+            padding: calc(var(--navbar-offset) + 2.5rem) 0 0;
+        }
+
+        .page-header .breadcrumb {
+            margin-bottom: 1rem;
+            font-size: .9rem;
+        }
+
+        .page-header .breadcrumb a {
+            text-decoration: none;
+        }
+
+        .section-padding {
+            padding: 4rem 0;
+        }
+
+        .section-title-kicker {
+            color: var(--brand-primary);
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            font-size: .8rem;
+            font-weight: 700;
+            margin-bottom: .6rem;
+        }
+
+        .img-octagon-destaque-wrapper {
+            width: 350px;
+            height: 350px;
+            max-width: 100%;
+            clip-path: var(--oct);
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            background-color: inherit;
+            outline: 1px solid rgba(0, 0, 0, 0.06);
+            outline-offset: -1px;
+        }
+
+        .img-octagon-destaque {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.07);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+            transition: transform .3s ease;
+        }
+
+        .img-octagon-destaque-wrapper:hover .img-octagon-destaque {
+            transform: scale(1.12);
+        }
+
+        .lista-check {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .lista-check li {
+            display: flex;
+            gap: .6rem;
+            margin-bottom: .6rem;
+        }
+
+        .lista-check i {
+            color: var(--brand-primary);
+        }
+
+        .etapa-card {
+            position: relative;
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            border-radius: 16px;
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+            height: 100%;
+        }
+
+        .etapa-numero {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            border-radius: 50%;
+            background: var(--brand-soft);
+            color: var(--brand-primary);
+            font-weight: 700;
+            font-family: 'Sora', sans-serif;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366;
+            color: #fff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 1000;
+        }
+
+        .whatsapp-float i {
+            margin-top: 14px;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            color: #fff;
+        }
+
+        .mobile-cta {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1040;
+            display: none;
+            gap: .5rem;
+            padding: .6rem .6rem calc(.6rem + env(safe-area-inset-bottom, 0px));
+            background: rgba(17, 24, 39, 0.97);
+            border-top: 1px solid rgba(255, 255, 255, 0.15);
+        }
+
+        .mobile-cta .btn {
+            flex: 1;
+            font-size: .9rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 992px) {
+            .whatsapp-float {
+                bottom: 80px;
+                right: 15px;
+            }
+
+            .mobile-cta {
+                display: flex;
+            }
+        }
+
+        .visually-hidden-focusable {
+            position: absolute;
+            left: -9999px;
+            top: auto;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+        }
+
+        .visually-hidden-focusable:focus {
+            position: static;
+            width: auto;
+            height: auto;
+            padding: .5rem 1rem;
+            background: #000;
+            color: #fff;
+            z-index: 1100;
+        }
+    </style>
+</head>
+
+<body>
+    <a class="visually-hidden-focusable" href="#conteudo-principal">Ir para o conteúdo</a>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" role="navigation" aria-label="Menu principal">
+        <div class="container">
+            <a class="navbar-brand" href="/">Fenicks</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="/#sobre">Quem somos</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" aria-current="page">Serviços</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item" href="/#servicos">Visão Geral</a></li>
+                            <li>
+                                <hr class="dropdown-divider" />
+                            </li>
+                            <li><a class="dropdown-item" href="/servicos/montagem-de-moveis-corporativos/">Montagem
+                                    de Móveis Corporativos</a></li>
+                            <li><a class="dropdown-item" href="/servicos/remanejamento-de-layout/">Remanejamento de
+                                    Layout</a></li>
+                            <li><a class="dropdown-item" href="/servicos/manutencao-predial/">Manutenção Predial e de
+                                    Mobiliário</a></li>
+                            <li><a class="dropdown-item" href="/servicos/drywall-e-divisorias/">Divisórias e Gesso</a>
+                            </li>
+                            <li><a class="dropdown-item" href="/servicos/instalacao-eletrica-e-cabeamento/">Instalação
+                                    Elétrica e Cabeamento</a></li>
+                            <li><a class="dropdown-item active" href="/servicos/gestao-de-obras/">Gestão de Obras e
+                                    Reformas</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/#diferenciais">Diferenciais</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#galeria">Galeria</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#clientes">Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <nav aria-label="Trilha de navegação">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Início</a></li>
+                    <li class="breadcrumb-item"><a href="/#servicos">Serviços</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Gestão de Obras e Reformas</li>
+                </ol>
+            </nav>
+            <p class="section-title-kicker">Serviços</p>
+            <h1 class="fw-bold mb-0">Gestão de Obras e Reformas Corporativas</h1>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        <section class="section-padding" aria-labelledby="titulo-intro">
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-md-6">
+                        <h2 id="titulo-intro" class="mb-4">Sua reforma com um único responsável</h2>
+                        <p>Reformar um escritório envolve coordenar muita coisa ao mesmo tempo: drywall, elétrica,
+                            piso, pintura, mobiliário e os fornecedores de cada frente. A Fenicks assume esse
+                            papel: planejamos, supervisionamos e executamos a reforma, e você acompanha tudo por
+                            relatórios periódicos, com um único responsável para cobrar.</p>
+                        <p>Nosso diferencial é integrar a obra com o mobiliário — o mesmo time que reforma o
+                            ambiente monta e posiciona as estações de trabalho. São mais de 30 anos de projetos
+                            para bancos, indústrias e escritórios, em Osasco, na Grande São Paulo e, conforme o
+                            projeto, em todo o Brasil.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="img-octagon-destaque-wrapper mx-auto">
+                            <img src="/images/especialidades/especialidade-gestao-obras.jpg"
+                                alt="Equipe executando reforma em ambiente corporativo"
+                                class="img-octagon-destaque" loading="lazy" decoding="async" width="2048"
+                                height="1365" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light" aria-labelledby="titulo-escopo">
+            <div class="container">
+                <h2 id="titulo-escopo" class="text-center mb-5">O que está incluso</h2>
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <ul class="lista-check">
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Planejamento
+                                        detalhado</strong> — escopo, cronograma e etapas definidos antes de começar.</span>
+                            </li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Supervisão
+                                        técnica</strong> — acompanhamento em todas as etapas da execução.</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Relatórios
+                                        periódicos</strong> — você acompanha o andamento sem precisar ir à obra.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <ul class="lista-check">
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Gestão de
+                                        terceiros</strong> — coordenação da interface com fornecedores e equipes
+                                    externas.</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Execução
+                                        integrada</strong> — drywall, elétrica, pisos, pintura e mobiliário no mesmo
+                                    projeto.</span></li>
+                            <li><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Entrega técnica
+                                        e pós-obra</strong> — limpeza final, vistoria de entrega e suporte após a
+                                    conclusão.</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" aria-labelledby="titulo-etapas">
+            <div class="container">
+                <h2 id="titulo-etapas" class="text-center mb-5">Como trabalhamos</h2>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="etapa-card p-4">
+                            <span class="etapa-numero mb-3">1</span>
+                            <h3 class="h5">Briefing</h3>
+                            <p class="mb-0">Entendemos o que você quer transformar no ambiente, o prazo desejado e as
+                                restrições do local.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="etapa-card p-4">
+                            <span class="etapa-numero mb-3">2</span>
+                            <h3 class="h5">Planejamento</h3>
+                            <p class="mb-0">Escopo, cronograma, equipes e fornecedores definidos e validados com
+                                você.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="etapa-card p-4">
+                            <span class="etapa-numero mb-3">3</span>
+                            <h3 class="h5">Execução supervisionada</h3>
+                            <p class="mb-0">Obra executada com supervisão técnica e relatórios periódicos de
+                                andamento.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <div class="etapa-card p-4">
+                            <span class="etapa-numero mb-3">4</span>
+                            <h3 class="h5">Entrega técnica</h3>
+                            <p class="mb-0">Vistoria final com você, limpeza pós-obra e suporte após a entrega.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light" aria-labelledby="titulo-faq">
+            <div class="container" style="max-width: 800px;">
+                <h2 id="titulo-faq" class="text-center mb-5">Perguntas frequentes</h2>
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1" aria-expanded="true" aria-controls="faq1">
+                                Vocês constroem prédios do zero?
+                            </button>
+                        </h3>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">Não. Nosso foco é reforma e adequação de ambientes
+                                corporativos existentes — escritórios, agências, áreas administrativas e comerciais.
+                                Não fazemos construção civil do zero nem obras estruturais.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+                                Como acompanho o andamento da obra?
+                            </button>
+                        </h3>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">Você recebe relatórios periódicos de andamento e tem contato
+                                direto com o responsável pelo projeto — sem precisar visitar a obra para saber como
+                                ela está.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+                                Gerenciam fornecedores que já contratamos?
+                            </button>
+                        </h3>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">Sim. A gestão de interface com terceiros faz parte do
+                                escopo: coordenamos o trabalho de fornecedores e equipes externas para que o
+                                cronograma se mantenha.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" aria-labelledby="titulo-relacionados">
+            <div class="container">
+                <h2 id="titulo-relacionados" class="text-center mb-5">Serviços relacionados</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="etapa-card p-4">
+                            <i class="bi bi-grid-1x2 fs-1 text-primary mb-2" aria-hidden="true"></i>
+                            <h3 class="h5">Divisórias e Gesso</h3>
+                            <p>Divisão e reorganização de ambientes com drywall, acabamento e pintura.</p>
+                            <a href="/servicos/drywall-e-divisorias/" class="stretched-link">Saiba mais<span
+                                    class="visually-hidden"> sobre divisórias e gesso</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="etapa-card p-4">
+                            <i class="bi bi-plug fs-1 text-primary mb-2" aria-hidden="true"></i>
+                            <h3 class="h5">Instalação Elétrica e Cabeamento</h3>
+                            <p>Pontos elétricos, rede e organização de cabeamento dentro da reforma.</p>
+                            <a href="/servicos/instalacao-eletrica-e-cabeamento/" class="stretched-link">Saiba
+                                mais<span class="visually-hidden"> sobre instalação elétrica e cabeamento</span></a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="etapa-card p-4">
+                            <i class="bi bi-box-seam fs-1 text-primary mb-2" aria-hidden="true"></i>
+                            <h3 class="h5">Montagem de Móveis Corporativos</h3>
+                            <p>O ambiente reformado entregue já mobiliado, com o mesmo fornecedor.</p>
+                            <a href="/servicos/montagem-de-moveis-corporativos/" class="stretched-link">Saiba
+                                mais<span class="visually-hidden"> sobre montagem de móveis corporativos</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding bg-light text-center" aria-labelledby="titulo-cta">
+            <div class="container">
+                <p class="section-title-kicker">Atendimento comercial</p>
+                <h2 id="titulo-cta" class="mb-3">Planejando uma reforma no escritório?</h2>
+                <p class="lead mb-4">Conte o que você quer transformar e receba uma proposta com escopo e prazo.</p>
+                <div class="d-flex gap-2 justify-content-center flex-wrap">
+                    <a href="https://wa.me/5511988732516?text=Ol%C3%A1%2C%20preciso%20de%20gest%C3%A3o%20de%20obra%20ou%20reforma%20de%20escrit%C3%B3rio."
+                        class="btn btn-success btn-lg" target="_blank" rel="noopener"
+                        data-track="servico_gestao_cta_whatsapp" data-location="servico_gestao"><i
+                            class="bi bi-whatsapp me-2" aria-hidden="true"></i>Chamar no WhatsApp</a>
+                    <a href="/#contato" class="btn btn-primary btn-lg" data-track="servico_gestao_cta_form"
+                        data-location="servico_gestao">Preencher formulário</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="mb-2">
+            <a href="https://www.instagram.com/fenicks__/" target="_blank" rel="noopener" class="text-white fs-4 mx-2"
+                aria-label="Instagram da Fenicks" data-track="footer_instagram" data-location="footer"><i
+                    class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="https://wa.me/5511988732516" target="_blank" rel="noopener" class="text-white fs-4 mx-2"
+                aria-label="WhatsApp da Fenicks" data-track="footer_whatsapp" data-location="footer"><i
+                    class="bi bi-whatsapp" aria-hidden="true"></i></a>
+        </div>
+        <p class="mb-0">&copy; <span id="ano"></span> Fenicks. Todos os direitos reservados.</p>
+    </footer>
+
+    <a href="https://wa.me/5511988732516?text=Ol%C3%A1%2C%20preciso%20de%20gest%C3%A3o%20de%20obra%20ou%20reforma%20de%20escrit%C3%B3rio."
+        target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contato via WhatsApp"
+        data-track="whatsapp_float" data-location="servico_gestao">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+
+    <div class="mobile-cta" aria-label="Ações rápidas">
+        <a href="https://wa.me/5511988732516?text=Ol%C3%A1%2C%20preciso%20de%20gest%C3%A3o%20de%20obra%20ou%20reforma%20de%20escrit%C3%B3rio."
+            class="btn btn-success" target="_blank" rel="noopener" data-track="mobile_whatsapp"
+            data-location="servico_gestao">WhatsApp</a>
+        <a href="/#contato" class="btn btn-primary" data-track="mobile_contato"
+            data-location="servico_gestao">Orçamento</a>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script>
+        function trackEvent(eventName, eventParams = {}) {
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, eventParams);
+            }
+        }
+
+        document.getElementById('ano').textContent = new Date().getFullYear();
+
+        document.querySelectorAll('[data-track]').forEach(element => {
+            element.addEventListener('click', () => {
+                trackEvent('cta_click', {
+                    cta_name: element.dataset.track,
+                    cta_location: element.dataset.location || 'site'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
